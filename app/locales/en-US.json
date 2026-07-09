@@ -1,0 +1,603 @@
+﻿{
+  "meta": {
+    "title": "Mito — Digital & AI Solutions for Airlines",
+    "description": "Mito Aero provides airline revenue management, pricing, network planning, operations control, distribution, NDC / One Order and data intelligence solutions for airline commercial operations.",
+    "og_title": "Mito · Reimagine every moment of airline retailing",
+    "og_description": "A China-based, Hainan-rooted aviation technology company building the modern operating system for airlines.",
+    "home": {
+      "title": "Mito Aero — Digital Intelligence for Airlines",
+      "description": "Mito Aero helps airlines digitize revenue, pricing, network planning, operations, distribution and data intelligence workflows.",
+      "og_title": "Mito Aero — Digital Intelligence for Airlines",
+      "og_description": "Commercial operations systems for airlines: 6 core solution areas and 3 extended capabilities."
+    },
+    "about": {
+      "title": "About Mito Aero — Built in Hainan, For Airlines",
+      "description": "Hainan Mito Transport Intelligence Co., Ltd. — 90%+ aviation-experts, average 10+ years of experience.",
+      "og_title": "About Mito Aero — Built in Hainan, For Airlines",
+      "og_description": "Team, values, mission — the three things about us."
+    },
+    "solutions": {
+      "title": "Solutions — Revenue / Pricing / Network / Operations",
+      "description": "Six core airline commercial operations solutions plus NDC, One Order and disruption support capabilities.",
+      "og_title": "Solutions — Revenue / Pricing / Network / Operations",
+      "og_description": "Modular aviation products — adopt one, or all."
+    },
+    "tech": {
+      "title": "Technology ? Cloud-native + Optimization + Open APIs",
+      "description": "Cloud-native microservices, forecasting and optimization models, REST / GraphQL APIs and airline ecosystem integration.",
+      "og_title": "Technology ? Cloud-native + Optimization + Open APIs",
+      "og_description": "Cloud-native architecture, open APIs and integration with airline business systems."
+    },
+    "customers": {
+      "title": "Customers & Partners",
+      "description": "10+ airlines in production — network, hybrid, low-cost, charter.",
+      "og_title": "Customers & Partners",
+      "og_description": "They are working with us — win together."
+    },
+    "insights": {
+      "title": "Industry Insights & Whitepapers",
+      "description": "Whitepapers, reports and blogs — understanding the digital transformation of Chinese aviation.",
+      "og_title": "Industry Insights & Whitepapers",
+      "og_description": "Deep dive into the future of Chinese aviation."
+    },
+    "news": {
+      "title": "Latest News",
+      "description": "Product launches, customer wins, company milestones.",
+      "og_title": "Latest News",
+      "og_description": "What we shipped, whom we signed."
+    },
+    "careers": {
+      "title": "Careers — Join Mito Aero",
+      "description": "We are hiring — for people who believe in “digitalizing China aviation”.",
+      "og_title": "Careers — Join Mito Aero",
+      "og_description": "Product, engineering, design, marketing — all open."
+    },
+    "contact": {
+      "title": "Contact — Mito Aero",
+      "description": "Book a demo, business enquiry, press — we respond within 1 business day.",
+      "og_title": "Contact — Mito Aero",
+      "og_description": "Haikou or Shanghai — tell us what you need first."
+    }
+  },
+  "nav": {
+    "brand": "Mito Aero",
+    "brand_full": "Hainan Mito Transport Intelligence Co., Ltd.",
+    "solutions": "Solutions",
+    "technology": "Technology",
+    "customers": "Customers",
+    "insights": "Insights",
+    "about": "About",
+    "news": "Newsroom",
+    "careers": "Careers",
+    "contact": "Contact",
+    "cta_demo": "Book a demo",
+    "cta_consult": "Talk to sales",
+    "lang": "Language"
+  },
+  "hero": {
+    "eyebrow": "Aviation AI · Hainan Mito",
+    "title_l1": "Make airline commercial operations more real-time and controllable",
+    "title_l2": "",
+    "desc": "Mito Aero provides revenue management, pricing, network planning, operations control, distribution, NDC / One Order and data intelligence solutions, designed to integrate with PSS, GDS and NDC ecosystems.",
+    "cta_primary": "Book a demo",
+    "cta_secondary": "Explore core solutions",
+    "badge": "Rooted in Hainan FTZ · Serving airlines worldwide",
+    "trust_label": "Trusted by leading airlines"
+  },
+  "customers": {
+    "items": {
+      "cs":  { "name": "China Southern", "en": "China Southern Airlines" },
+      "hn":  { "name": "Hainan Airlines", "en": "Hainan Airlines" },
+      "jy":  { "name": "Juneyao Airlines", "en": "Juneyao Airlines" },
+      "gba": { "name": "Greater Bay Airlines", "en": "Greater Bay Airlines" },
+      "dh":  { "name": "Donghai Airlines", "en": "Donghai Airlines" },
+      "qd":  { "name": "Qingdao Airlines", "en": "Qingdao Airlines" },
+      "hx":  { "name": "China Express", "en": "China Express Airlines" }
+    },
+    "more": { "name": "+5", "en": "Trusted airlines" }
+  },
+  "kpi": {
+    "title": "Built to scale with every flight",
+    "desc": "Composable modules for full-service, hybrid and low-cost carriers — from a single product to end-to-end platform transformation.",
+    "items": {
+      "airlines": "Airlines served",
+      "airlines_unit": "+",
+      "modules": "Core solutions",
+      "modules_unit": "",
+      "experts": "Aviation experts",
+      "experts_unit": "%",
+      "passengers": "Passengers covered",
+      "passengers_unit": "M+"
+    }
+  },
+  "solutions": {
+    "eyebrow": "Solutions",
+    "title": "Six core solutions for airline commercial operations",
+    "desc": "Modular solutions across revenue, pricing, network, operations, distribution and data intelligence, extended with NDC, One Order and disruption support capabilities.",
+    "items": {
+      "rm": {
+        "title": "Revenue Management",
+        "desc": "AI-driven RMS with elasticity, demand forecasting and dynamic pricing — optimise every flight, every day.",
+        "tag": "RMS",
+        "metric": "10 airlines served"
+      },
+      "pricing": {
+        "title": "Pricing Management",
+        "desc": "End-to-end fare filing, multi-channel distribution and rule configuration with real-time monitoring.",
+        "tag": "Pricing",
+        "metric": "10 airlines served"
+      },
+      "network": {
+        "title": "Network Planning",
+        "desc": "Schedule optimisation and capacity planning powered by data and operations science.",
+        "tag": "Network",
+        "metric": "10 airlines served"
+      },
+      "ops": {
+        "title": "Operations Control",
+        "desc": "Unified flight operations platform for planning, monitoring, disruption and recovery.",
+        "tag": "Operations",
+        "metric": "6 airlines served"
+      },
+      "retail": {
+        "title": "Distribution & e-Commerce",
+        "desc": "B2C / B2B / group sales solutions across mobile and web, with ancillaries and lifecycle management.",
+        "tag": "Distribution",
+        "metric": "11 airlines served"
+      },
+      "data": {
+        "title": "Data Platform & Intelligence",
+        "desc": "Unifies flight, fare, order, inventory, channel and operations data to support analytics and forecasting across revenue, network and operations teams.",
+        "tag": "Data Intelligence",
+        "metric": "10 airlines served"
+      },
+      "oneorder": {
+        "tag": "One Order",
+        "title": "One Order management",
+        "desc": "A unified data model for the entire order lifecycle — booking, re-issue, refund, irregular events — under a single order ID. The foundation capability for NDC. Available with all major airline systems.",
+        "metric": "2 airlines in production"
+      },
+      "ndc": {
+        "tag": "NDC API",
+        "title": "NDC API sales service",
+        "desc": "IATA NDC-compliant distribution with both XML and JSON bindings. Supports NDC Tier 1 / 2 / 3 capabilities, rich media, offer management — opens the door to direct channels.",
+        "metric": "IATA Level 1 certified"
+      },
+      "irregular": {
+        "tag": "Irregular Ops",
+        "title": "Irregular-ops recovery",
+        "desc": "End-to-end automation for delay / cancellation / diversion / missed-connection: entitlements, re-accommodation, hotels & ground-handling, refunds. Average recovery time down 60%.",
+        "metric": "2 airlines in production"
+      }
+    },
+    "cta_more": "See all solutions"
+  },
+  "tech": {
+    "eyebrow": "Technology",
+    "title": "A technology foundation for evolving airline business systems",
+    "desc": "Cloud-native, microservices-based, open API and forecasting / optimization capabilities that coexist with PSS, GDS, NDC and One Order ecosystems.",
+    "items": {
+      "cloud": {
+        "title": "Cloud-native",
+        "desc": "Containerised microservices with elastic scaling and 24×7 reliability."
+      },
+      "ai": {
+        "title": "Forecasting & Optimization",
+        "desc": "Configurable and explainable models for demand forecasting, price elasticity, inventory control, route revenue evaluation and disruption recovery."
+      },
+      "api": {
+        "title": "Open APIs & SDKs",
+        "desc": "REST and GraphQL — embed into your digital storefront and mobile apps."
+      },
+      "security": {
+        "title": "Security & Compliance",
+        "desc": "ISO 27001 / SOC 2 processes. SaaS or self-hosted deployment."
+      },
+      "ecosystem": {
+        "title": "Ecosystem",
+        "desc": "Integrated with leading GDS, PSS and NDC aggregators."
+      }
+    },
+    "demo": {
+      "eyebrow": "Live Demo",
+      "bar": "Mito Aero ? Revenue Decision Desk",
+      "title": "Revenue forecast and pricing recommendation demo",
+      "desc": "Using a PEK-SHA route example, the demo shows how demand, inventory and fare rules become actionable revenue recommendations.",
+      "cmd1": "Analyze PEK-SHA 7-day revenue trend",
+      "cmd2": "Calling revenue forecast model...",
+      "cmd3": "Result: Avg fare up ~3.2%",
+      "cmd4": "Suggestion: Raise M class 5%, tighten discount cabins",
+      "cmd5": "Expected gain: ~1.28M CNY / week",
+      "ready": "Forecast ready",
+      "run": "Run forecast",
+      "reset": "Reset"
+    }
+  },
+  "customers": {
+    "eyebrow": "Customers",
+    "title": "Customers & Partners",
+    "desc": "Trusted by network carriers, hybrid carriers, LCCs and charter operators — from single-module to full-platform partnerships.",
+    "stats_title": "Together, we delivered",
+    "stats": {
+      "stat1": {
+        "value": "10",
+        "unit": "+",
+        "label": "Airlines live"
+      },
+      "stat2": {
+        "value": "6",
+        "unit": "+",
+        "label": "Years building"
+      },
+      "stat3": {
+        "value": "30",
+        "unit": "+",
+        "label": "Aviation experts"
+      },
+      "stat4": {
+        "value": "10",
+        "unit": "",
+        "label": "Core capabilities"
+      }
+    },
+    "testimonials_title": "What customers say",
+    "testimonials": {
+      "t1": {
+        "quote": "After Mito's pricing system went live, our pricing team moved from weekly price updates to on-demand real-time pricing — the change in the revenue curve was visible to the eye.",
+        "name": "L.",
+        "role": "VP of Revenue Management",
+        "company": "Full-service network airline"
+      },
+      "t2": {
+        "quote": "Their network optimization team truly understands how Chinese airlines structure their networks — they gave us an executable, continuously updated slot recommendation.",
+        "name": "Z.",
+        "role": "Director of Network Planning",
+        "company": "Regional airline"
+      },
+      "t3": {
+        "quote": "As a hybrid airline, we care most about go-live speed and controllable cost. Mito's modular delivery fit perfectly.",
+        "name": "W.",
+        "role": "Chief Information Officer",
+        "company": "Hybrid airline"
+      }
+    },
+    "cases_title_eyebrow": "Case studies",
+    "cases_title": "How customers create value with Mito",
+    "cases": {
+      "c1": {
+        "airline": "Full-service network airline",
+        "scope": "Revenue Management + Pricing",
+        "headline": "From weekly pricing cycles to on-demand real-time response",
+        "stats": [
+          { "value": "+12.4%", "label": "RASK YoY" },
+          { "value": "5x", "label": "pricing response time" }
+        ],
+        "summary": "After deploying the revenue forecast and pricing-integration modules, the team shifted from \"watching dashboards\" to \"making decisions.\" Hours saved each month translate to three new routes flown."
+      },
+      "c2": {
+        "airline": "Regional airline",
+        "scope": "Network + Slot Optimization",
+        "headline": "Added 7 new flights during peak slots at 5 airports",
+        "stats": [
+          { "value": "+7", "label": "new flights in peak slots" },
+          { "value": "91%", "label": "slot utilization (uplift)" }
+        ],
+        "summary": "The network planning team adopted Mito's algorithmic suggestions as a standing weekly agenda item — within six months, slot resources shifted from supply-driven to market-driven."
+      },
+      "c3": {
+        "airline": "Hybrid airline",
+        "scope": "B2C / B2B Sales Platform",
+        "headline": "8x peak order capacity",
+        "stats": [
+          { "value": "8x", "label": "peak order capacity" },
+          { "value": "-43%", "label": "promo-season incidents" }
+        ],
+        "summary": "Holiday promotions no longer trigger emergency war rooms. The cloud-native architecture and unified channels let the operations team enjoy the holiday for the first time."
+      }
+    },
+    "logos_label": "Partner airlines (illustrative)",
+    "partners": {}
+  },
+  "insights": {
+    "eyebrow": "Latest insights",
+    "title": "Charting the digital future of Chinese aviation",
+    "desc": "Field-tested perspectives from Mito teams and our airline advisory partners — covering revenue, ops, customer experience.",
+    "c1": {
+      "tag": "Whitepaper",
+      "title": "China Aviation Digital Roadmap 2026",
+      "desc": "Full coverage of 12 business scenarios — one chart that shows the next 3 years of investment priorities and ROI.",
+      "btn": "Download →"
+    },
+    "c2": {
+      "tag": "Industry report",
+      "title": "The real gap in AI for revenue management",
+      "desc": "In-depth interviews with 8 Chinese airline RMS owners on the POC-to-production gap.",
+      "btn": "Read full →"
+    },
+    "c3": {
+      "tag": "Blog",
+      "title": "From Excel to LLM — a transformation diary",
+      "desc": "A former chief analyst from the buyer side on team shape, tool stack and pitfalls.",
+      "btn": "Read →"
+    },
+    "items": {
+      "w1": {
+        "tag": "Whitepaper",
+        "title": "China Aviation Digital Roadmap 2026",
+        "desc": "Full coverage of 12 business scenarios — one chart that shows the next 3 years of investment priorities and ROI.",
+        "btn": "Read more →"
+      },
+      "w2": {
+        "tag": "Industry report",
+        "title": "The real gap in AI for revenue management",
+        "desc": "In-depth interviews with 8 Chinese airline RMS owners on the POC-to-production gap.",
+        "btn": "Read more →"
+      },
+      "w3": {
+        "tag": "Blog",
+        "title": "From Excel to LLM — a transformation diary",
+        "desc": "A former chief analyst from the buyer side on team shape, tool stack and pitfalls.",
+        "btn": "Read more →"
+      }
+    },
+    "c4": {
+      "tag": "Customer case",
+      "title": "A mid-size airline: RMS in 6 months, +9.4% revenue",
+      "desc": "Anonymized case — decision path, migration plan, pitfalls, and the revenue curve (sanitized).",
+      "btn": "See case →"
+    },
+    "c5": {
+      "tag": "Video",
+      "title": "Cloud-native RMS architecture in 12 minutes",
+      "desc": "Our CTO at ArchSummit — from monolith to global edge nodes, architecture and trade-offs.",
+      "btn": "Watch →"
+    },
+    "c6": {
+      "tag": "Podcast",
+      "title": "After the Flight Path — Ep 17: A dispatcher’s 4 AM",
+      "desc": "A real dispatch morning — decisions, pressure, tools, and the AI assistant he wants most.",
+      "btn": "Listen →"
+    },
+    "meta": {
+      "minutes": "read",
+      "pdf": "PDF · 3.8 MB",
+      "author": "authored by Atto",
+      "case": "Case · 2026 Q1",
+      "video": "Video · 12 min",
+      "subtitles": "EN/ZH subtitles",
+      "audio": "Audio · 42 min"
+    },
+    "filter": {
+      "all": "All",
+      "wp": "Whitepapers",
+      "case": "Cases",
+      "video": "Video / Podcast",
+      "blog": "Blog"
+    },
+    "view_all": "See all resources →",
+    "default_count": "Showing 6 resources"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About Mito",
+    "heading": "Rooted in Hainan, focused on aviation",
+    "p1": "Hainan Mito Transport Intelligence Co., Ltd. (Mito), founded January 2025, is an innovative technology company headquartered in Haikou, in the core area of the Hainan Free Trade Zone.",
+    "p2": "We ride the strategic momentum of Hainan to digitalise and intelligentise industry — striving to be the leading technology services provider in transportation and travel.",
+    "p3": "We deliver consultancy, planning and IT implementation for aviation market and data businesses — helping airlines maximise commercial value.",
+    "values_title": "Our values",
+    "values": {
+      "v1": {
+        "title": "Expertise",
+        "desc": "90%+ of our team comes from aviation, with 10+ years on average."
+      },
+      "v2": {
+        "title": "Agility",
+        "desc": "Scrum + DevOps — ship a module in 2–4 weeks."
+      },
+      "v3": {
+        "title": "Long-termism",
+        "desc": "We build systems meant to compound over 10 years."
+      }
+    },
+    "team": {
+      "eyebrow": "Our Team",
+      "title": "Our team",
+      "subtitle": "A cross-functional team with deep aviation expertise and solid engineering, rooted in the Hainan FTP, serving global civil aviation.",
+      "members": {
+        "value": "30+",
+        "label": "Core members",
+        "desc": "Product, engineering, consulting, delivery, ops"
+      },
+      "expert": {
+        "value": "90%+",
+        "label": "Industry experts",
+        "desc": "10+ years in aviation / IT consulting"
+      },
+      "pm": {
+        "value": "12+",
+        "label": "Senior product managers",
+        "desc": "From airlines, CAICT, and leading SaaS"
+      },
+      "tech": {
+        "value": "15+",
+        "label": "Senior engineers",
+        "desc": "Cloud-native, big data, ML engineering"
+      }
+    }
+  },
+  "news": {
+    "eyebrow": "Newsroom",
+    "title": "Latest news",
+    "items": {
+      "n1": {
+        "date": "2026-06-15",
+        "tag": "Customer",
+        "title": "Mito signs a regional carrier for pricing management"
+      },
+      "n2": {
+        "date": "2026-05-20",
+        "tag": "Product",
+        "title": "Network Planning Suite NPS 2.0 released"
+      },
+      "n3": {
+        "date": "2026-04-08",
+        "tag": "Company",
+        "title": "Mito Haikou R&D centre officially opens"
+      }
+    },
+    "more": "View all news"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build the next-generation airline together",
+    "desc": "Drop a message or call sales — we'll get back to you within 1 business day.",
+    "form": {
+      "name": "Your name",
+      "company": "Company",
+      "role": "Role",
+      "email": "Work email",
+      "phone": "Phone",
+      "interest": "Topic",
+      "interest_options": {
+        "rm": "Revenue Mgmt (RMS)",
+        "pricing": "Pricing Mgmt (PMS)",
+        "network": "Network (NPS)",
+        "ops": "Flight Ops (OFC)",
+        "retail": "Distribution (DPS)",
+        "data": "Data Platform & Intelligence",
+        "other": "Other"
+      },
+      "message": "Anything you'd like us to know (optional)",
+      "submit": "Send",
+      "success": "Submitted! We will reach out within 3 business days.",
+      "error": "Failed to send. Please try again or email us directly.",
+      "product": "Product of interest",
+      "product_default": "Select a product",
+      "product_options": {
+        "rms": "Revenue Mgmt (RMS)",
+        "pms": "Pricing Mgmt (PMS)",
+        "nps": "Network (NPS)",
+        "ofc": "Flight Ops (OFC)",
+        "dps": "Distribution (DPS)",
+        "data": "Data Platform & Intelligence",
+        "oneorder": "One Order",
+        "ndc": "NDC API",
+        "irregular": "Irregular Flight Mgmt",
+        "other": "Other"
+      },
+      "sending": "Sending…",
+      "submitted": "✓ Submitted",
+      "retry": "Retry",
+      "error_required": "Please fill all required fields.",
+      "error_product": "Please select a product.",
+      "error_email": "Please enter a valid email address",
+      "error_send": "Submission failed. We saved it locally; please retry later.",
+      "name_ph": "e.g. John Smith",
+      "company_ph": "e.g. Hainan Airlines",
+      "phone_ph": "e.g. +1 555 123 4567 (optional)",
+      "email_ph": "e.g. john at airline dot com",
+      "product_ph": "e.g. Revenue / Pricing / Network / Ops / Other",
+      "message_ph": "Tell us briefly about your pain points, what you would like to see first, and any timing constraints.",
+      "error_required_name": "Please enter your name",
+      "error_required_company": "Please enter your company",
+      "error_required_email": "Please enter your work email",
+      "error_required_product": "Please pick a product",
+      "success_detail": "In the meantime feel free to browse our whitepapers and product briefs.",
+      "success_cta_resources": "Browse resources",
+      "success_cta_home": "Back to home"
+    },
+    "info": {
+      "hq": "Headquarters",
+      "hq_value": "Haikou National High-Tech Zone, Hainan, China",
+      "sales": "Sales",
+      "sales_value": "+86 0898-8888-XXXX",
+      "email": "Email",
+      "email_value": "hello (at) mito-aero.com",
+      "media": "Media",
+      "media_value": "press (at) mito-aero.com"
+    }
+  },
+  "careers": {
+    "title": "Open roles",
+    "subtitle": "If you believe in 'making Chinese aviation digital' — we'd love to meet you."
+  },
+  "footer": {
+    "tagline": "Mito Aero — Digitalizing aviation, from Hainan to the world",
+    "col_products": "Products",
+    "col_company": "Company",
+    "col_resources": "Resources",
+    "col_legal": "Legal",
+    "products": {
+      "rm": "Revenue Mgmt",
+      "pricing": "Pricing Mgmt",
+      "network": "Network",
+      "ops": "Operations",
+      "retail": "Distribution",
+      "data": "Data intelligence"
+    },
+    "company": {
+      "about": "About",
+      "team": "Team",
+      "news": "News",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "resources": {
+      "blog": "Blog",
+      "whitepapers": "Whitepapers",
+      "case_studies": "Case Studies",
+      "api_docs": "API docs"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "icp": "ICP Filing"
+    },
+    "icp_text": "Qiong ICP No. XXXXXXXX",
+    "copyright": "© 2026 Hainan Mito Transport Intelligence Co., Ltd. All Rights Reserved.",
+    "brand_name": "Mito Aero"
+  },
+  "newsletter": {
+    "title": "Every two weeks, only worth-sharing content",
+    "desc": "From Mito teams: 1 deep insight + 3 short reads worth your scroll. No spam.",
+    "submit": "Subscribe",
+    "consent": "By subscribing you agree to receive email from us — you can opt out anytime."
+  },
+  "lang": {
+    "options": {
+      "zhCN": {
+        "label": "Simplified Chinese"
+      },
+      "zhTW": {
+        "label": "Traditional Chinese"
+      },
+      "enUS": {
+        "label": "English"
+      }
+    }
+  },
+  "home": {
+    "ticker": {
+      "airlines": {
+        "label": "Airlines in production",
+        "value": "10+"
+      },
+      "prices": {
+        "label": "Pricing instructions today",
+        "value": "3,210,402"
+      },
+      "flights": {
+        "label": "Flights dispatched this month",
+        "value": "184,260"
+      },
+      "latency": {
+        "label": "Avg. query latency",
+        "value": "86 ms"
+      }
+    }
+  }
+}
+
+
+
+

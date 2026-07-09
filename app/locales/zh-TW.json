@@ -1,0 +1,610 @@
+﻿{
+  "meta": {
+    "title": "邁途數創 — 民航業數智化技術服務提供商",
+    "description": "邁途數創提供收益管理、運價、航線網絡、航班主控、分銷電商、NDC / One Order 與數據智能解決方案，助力航空公司提升商業運營效率。",
+    "og_title": "邁途數創 · 讓航空公司數位化，從海南連接世界",
+    "og_description": "一家專註民航數位化的中國創新型科技企業，植根海南自由贸易港。",
+    "home": {
+      "title": "邁途數創 — 民航業數智化技術服務提供商",
+      "description": "讓航司數字化，從海南連接世界。邁途數創為航空公司提供收益管理、運價、航線網絡、航班主控、分銷電商與數據智能解決方案。",
+      "og_title": "邁途數創 — 民航業數智化技術服務提供商",
+      "og_description": "面向航空公司的商業運營數字化系統 — 6 大核心解決方案與 3 項擴展能力。"
+    },
+    "about": {
+      "title": "關於邁途數創 — 民航數智化技術與團隊",
+      "description": "海南邁途數創科技有限公司，植根海口自貿港。團隊 90%+ 民航專家，平均 10+ 年經驗。",
+      "og_title": "關於邁途數創 — 民航數智化技術與團隊",
+      "og_description": "團隊、價值觀、信仰，關於我們三件事。"
+    },
+    "solutions": {
+      "title": "產品與解決方案 — 收益 / 運價 / 網路 / 主控",
+      "description": "六大核心解決方案與三項擴展能力：RMS、PMS、NPS、OFC、分銷電商、數據中台、NDC、One Order 與不正常航班保障。",
+      "og_title": "產品與解決方案 — 收益 / 運價 / 網路 / 主控",
+      "og_description": "六大產品模塊覆蓋民航核心業務 — 按需組合。"
+    },
+    "tech": {
+      "title": "技術與能力 — 雲原生 + 預測優化 + 開放 API",
+      "description": "雲原生微服務、預測與優化算法、REST/GraphQL 雙協議開放 API、ISO 27001 / SOC 2 合規。",
+      "og_title": "技術與能力 — 雲原生 + 預測優化 + 開放 API",
+      "og_description": "雲原生、開放 API 與航司業務系統集成能力。"
+    },
+    "customers": {
+      "title": "客戶與合作伙伴 — 聯合航司共贏",
+      "description": "10+ 在用航司，覆蓋網絡航空公司、混合航司、低成本本航司及包機營運商。",
+      "og_title": "客戶與合作伙伴 — 聯合航司共贏",
+      "og_description": "他們正在與邁途數創合作 — 數智化一起贏。"
+    },
+    "insights": {
+      "title": "行業洞察與白皮書 — 民航數位化轉型",
+      "description": "白皮書、行業報告、博客 — 讀懂中國民航數智化轉型的當前與未來。",
+      "og_title": "行業洞察與白皮書 — 民航數位化轉型",
+      "og_description": "中國民航數位化深度研究 — 趨勢、案例、清單。"
+    },
+    "news": {
+      "title": "最新動態 — 邁途數創",
+      "description": "產品發布 / 客戶簽約 / 公司動態。",
+      "og_title": "最新動態 — 邁途數創",
+      "og_description": "最新簽約、產品發布、團隊動向。"
+    },
+    "careers": {
+      "title": "加入我們 — 邁途數創",
+      "description": "我們在招 — 和一群相信“讓中國民航數位化”的人一起做。",
+      "og_title": "加入我們 — 邁途數創",
+      "og_description": "產品、工程、设计、市場 · 我們都在招。"
+    },
+    "contact": {
+      "title": "聯絡我們 — 邁途數創",
+      "description": "預約演示、商務合作、媒體諮詢 — 我們 1 個工作日內回覆。",
+      "og_title": "聯絡我們 — 邁途數創",
+      "og_description": "上海、海口都可拜訪 — 預約時請先告訴我們需求。"
+    }
+  },
+  "nav": {
+    "brand": "邁途數創",
+    "brand_full": "海南邁途數創科技有限公司",
+    "solutions": "產品與解決方案",
+    "technology": "技術與能力",
+    "customers": "客戶與案例",
+    "insights": "行業洞察",
+    "about": "關於我們",
+    "news": "新闻動態",
+    "careers": "加入我們",
+    "contact": "聯絡我們",
+    "cta_demo": "預約演示",
+    "cta_consult": "與顧問沟通",
+    "lang": "簡 / 繁 / EN"
+  },
+  "hero": {
+    "eyebrow": "民航數智化 · Hainan Mito",
+    "title_l1": "讓航司商業運營更實時、更可控",
+    "title_l2": "",
+    "desc": "邁途數創為航空公司提供收益管理、運價管理、航線網絡、航班主控、分銷電商、NDC / One Order 與數據智能解決方案，支持與 PSS、GDS、NDC 生態集成。",
+    "cta_primary": "預約演示",
+    "cta_secondary": "查看核心解決方案",
+    "badge": "植根海南自貿港 · 服務全球民航業",
+    "trust_label": "他們正在與邁途數創合作"
+  },
+  "customers": {
+    "eyebrow": "Customers",
+    "title": "客戶與合作伙伴",
+    "desc": "服務網絡航空公司、混合航司、低成本本航司和包機營運商，提供從單模塊到全平台的合作模式。",
+    "stats_title": "我們一起，做出了這些成绩",
+    "stats": {
+      "stat1": {
+        "value": "10",
+        "unit": "+",
+        "label": "在用航司"
+      },
+      "stat2": {
+        "value": "6",
+        "unit": "+",
+        "label": "行業领域經驗（年）"
+      },
+      "stat3": {
+        "value": "30",
+        "unit": "+",
+        "label": "民航專家"
+      },
+      "stat4": {
+        "value": "10",
+        "unit": "",
+        "label": "核心業務能力"
+      }
+    },
+    "testimonials_title": "客戶怎麼說",
+    "testimonials": {
+      "t1": {
+        "quote": "邁途數創的運價系統上線後，我們的運價人員從一週調一次價，變成了按需即時調價 — 收益曲線的變化，肉眼可見。",
+        "name": "L 副總",
+        "role": "收益管理副總裁",
+        "company": "某全服務網絡航司 · 收益管理部"
+      },
+      "t2": {
+        "quote": "他們的航線優化團隊非常懂中國航司的網絡結構，給了我們一份可執行、可持續更新的時刻建議方案。",
+        "name": "Z 總監",
+        "role": "網絡規劃總監",
+        "company": "某區域型航司 · 網絡規劃部"
+      },
+      "t3": {
+        "quote": "作為一家混合航司，我們最看重上線速度與可控成本，邁途數創的模組化交付正好對得上。",
+        "name": "W CIO",
+        "role": "首席信息官",
+        "company": "某混合型航司 · IT 與數位化"
+      }
+    },
+    "logos_label": "合作航司（示意）",
+    "partners": {},
+    "cases_title_eyebrow": "案例研究",
+    "cases_title": "他們如何與邁途數創共創價值",
+    "cases": {
+      "c1": {
+        "airline": "某全服務網絡航司",
+        "scope": "收益管理 + 運價管理",
+        "headline": "把調價頻率從一週一次變為按需即時",
+        "stats": [
+          {
+            "value": "+12.4%",
+            "label": "客公里收益同比"
+          },
+          {
+            "value": "5 倍",
+            "label": "調價回應時效"
+          }
+        ],
+        "summary": "上線收益預測與運價聯動模組後，團隊把精力從「看報表」轉向「做決策」。每月節省的工時，可換算為多飛 3 條新航線。"
+      },
+      "c2": {
+        "airline": "某區域型航司",
+        "scope": "航線網絡 + 時刻最佳化",
+        "headline": "在 5 個機場的瓶頸時段多飛了 7 條線",
+        "stats": [
+          {
+            "value": "+7 條",
+            "label": "瓶頸時段新增航班"
+          },
+          {
+            "value": "91%",
+            "label": "時刻使用率(提升)"
+          }
+        ],
+        "summary": "網絡規劃團隊把邁途數創的演算法建議作為週會的固定議程，半年內把時刻資源從「供給驅動」切換到「市場驅動」。"
+      },
+      "c3": {
+        "airline": "某混合型航司",
+        "scope": "B2C/B2B 銷售平台",
+        "headline": "分銷訂單峰值承載 8 倍提升",
+        "stats": [
+          {
+            "value": "8 倍",
+            "label": "訂單峰值承載"
+          },
+          {
+            "value": "-43%",
+            "label": "促銷期故障工單"
+          }
+        ],
+        "summary": "假日大促時,系統不再臨時拉群協調容量。雲原生架構與多通路一體化讓營運團隊第一次可以「躺著過節」。"
+      }
+    }
+  },
+  "kpi": {
+    "title": "用规模化的能力，承載每一次飞行",
+    "desc": "面向全服務、混合及低成本本航司，提供覆蓋航班全生命週期的可組合模塊化平台。",
+    "items": {
+      "airlines": "服務航司",
+      "airlines_unit": "+",
+      "modules": "核心解決方案",
+      "modules_unit": "个",
+      "experts": "民航领域專家占比",
+      "experts_unit": "%",
+      "passengers": "覆蓋旅客",
+      "passengers_unit": "億+"
+    }
+  },
+  "solutions": {
+    "eyebrow": "Solutions",
+    "title": "6 大核心解決方案，覆蓋航司商業運營主流程",
+    "desc": "圍繞收益、運價、航線、運行、分銷與數據智能，按需組合上線，並通過 NDC、One Order 與不正常航班保障擴展關鍵業務能力。",
+    "items": {
+      "rm": {
+        "title": "收益管理 RMS",
+        "desc": "新一代智能收益管理系統，融合 AI 演演算法預測客流與市場趨勢，輸出最优價格方案。",
+        "tag": "Revenue Management",
+        "metric": "十家航空公司服務經驗"
+      },
+      "pricing": {
+        "title": "運價管理 PMS",
+        "desc": "全流程運價發布與多渠道分發，規則可視、監控实时、迭代敏捷。",
+        "tag": "Pricing",
+        "metric": "十家航空公司服務經驗"
+      },
+      "network": {
+        "title": "航線網絡 NPS",
+        "desc": "智能航線规劃與網路优化，辅助时刻編排與運力統筹。",
+        "tag": "Network Planning",
+        "metric": "十家航空公司服務經驗"
+      },
+      "ops": {
+        "title": "航班主控 OFC",
+        "desc": "一體化航班運行控制平台，覆蓋计劃、監控、應急與恢复。",
+        "tag": "Operations",
+        "metric": "六家航空公司服務經驗"
+      },
+      "retail": {
+        "title": "分銷與電商",
+        "desc": "B2C / B2B / 團隊全渠道銷售解決方案，支持灵活促销與訂單全生命週期管理。",
+        "tag": "Distribution",
+        "metric": "十一家航空公司服務經驗"
+      },
+      "data": {
+        "title": "數據中台與智能分析",
+        "desc": "統一航班、運價、訂單、艙位、渠道與運行數據，為收益、網絡和運行部門提供實時分析與預測支持。",
+        "tag": "Data Intelligence",
+        "metric": "十家航空公司服務經驗"
+      },
+      "oneorder": {
+        "tag": "One Order",
+        "title": "One Order 訂單管理",
+        "desc": "把訂單生命週期統一到單一資料模型：購票、改簽、退票、異常全部走單一訂單 ID,實現 NDC 時代的基礎訂單能力。",
+        "metric": "兩家航空公司服務經驗"
+      },
+      "ndc": {
+        "tag": "NDC API",
+        "title": "NDC API 銷售服務",
+        "desc": "對接 IATA NDC 標準,提供 XML / JSON 雙協議,支援 NDC Tier 1 / 2 / 3 全部能力,豐富航空公司直連通路。",
+        "metric": "IATA 一級標準"
+      },
+      "irregular": {
+        "tag": "Irregular Ops",
+        "title": "不正常航班保障",
+        "desc": "延誤／取消／備降／轉机中斷的全流程自動化：權益判定、改簽演算法、住宿與賠付引擎、酒店與地面服務直連。",
+        "metric": "兩家航空公司服務經驗"
+      }
+    },
+    "cta_more": "查看全部解決方案"
+  },
+  "tech": {
+    "eyebrow": "Technology",
+    "title": "支撐航司業務系統持續演進的技術底座",
+    "desc": "雲原生、微服務、開放 API、預測與優化算法 — 與航司現有 PSS / GDS / NDC / One Order 生態共存。",
+    "items": {
+      "cloud": {
+        "title": "雲原生架構",
+        "desc": "基於容器化與微服務，弹性伸缩、按模塊升級，7×24 高可用保障。"
+      },
+      "ai": {
+        "title": "預測與優化算法",
+        "desc": "圍繞需求預測、價格彈性、艙位控制、航線收益評估與運行恢復，提供可解釋、可配置的優化模型。"
+      },
+      "api": {
+        "title": "開放 API & SDK",
+        "desc": "REST / GraphQL 雙協議，按需嵌入你的數字门戶與移動端。"
+      },
+      "security": {
+        "title": "安全合規",
+        "desc": "通過 ISO 27001 / SOC 2 流程，等保三级合規，自有部署與 SaaS 雙形態。"
+      },
+      "ecosystem": {
+        "title": "集成生態",
+        "desc": "已对接主流 GDS、PSS、NDC 聚合器與航司核心系統，上线週期可控。"
+      }
+    },
+    "demo": {
+      "eyebrow": "Live Demo",
+      "bar": "邁途數創 · 收益決策台",
+      "title": "收益預測與調價建議演示",
+      "desc": "以京滬航線為例，展示系統如何結合需求、艙位與運價規則生成可執行的收益建議。",
+      "cmd1": "分析京滬線未來 7 天收益趨勢",
+      "cmd2": "正在呼叫收益預測模型...",
+      "cmd3": "預測結果:平均票價上漲約 3.2%",
+      "cmd4": "建議:上調 M 艙票價 5%,收緊折扣艙位",
+      "cmd5": "預期增收:約 128 萬元/週",
+      "ready": "預測完成",
+      "run": "執行預測",
+      "reset": "重置"
+    }
+  },
+  "insights": {
+    "eyebrow": "最新洞察",
+    "title": "與中國民航一同探索數智化轉型",
+    "desc": "來自邁途團隊 + 一线民航顧問的實戰觀點 — 涵蓋收益 / 調度 / 客戶體驗。",
+    "c1": {
+      "tag": "白皮書",
+      "title": "中國民航數智化轉型路线圖 2026",
+      "desc": "完整覆蓋 12 大業務場景，一张圖看清未來 3 年投入优先级與回报曲线。",
+      "btn": "下載白皮書 →"
+    },
+    "c2": {
+      "tag": "行業報告",
+      "title": "AI 在收益管理中的真实落地差距",
+      "desc": "深度访談 8 家中国航司的 RMS 項目负责人，看清 POC 與生产之間的鸿沟。",
+      "btn": "查看全文 →"
+    },
+    "c3": {
+      "tag": "博客",
+      "title": "從 Excel 到 LLM：航司數據團隊的演进笔記",
+      "desc": "一位前甲方首席分析师的轉型日記 — 團隊配置、工具栈、踩坑清單。",
+      "btn": "讀 →"
+    },
+    "items": {
+      "w1": {
+        "tag": "白皮書",
+        "title": "中國民航數智化轉型路线圖 2026",
+        "desc": "完整覆蓋 12 大業務場景，一张圖看清未來 3 年投入优先级與回报曲线。",
+        "btn": "查看全文 →"
+      },
+      "w2": {
+        "tag": "行業報告",
+        "title": "AI 在收益管理中的真实落地差距",
+        "desc": "深度访談 8 家中国航司的 RMS 項目负责人，看清 POC 與生产之間的鸿沟。",
+        "btn": "查看全文 →"
+      },
+      "w3": {
+        "tag": "博客",
+        "title": "從 Excel 到 LLM：航司數據團隊的演进笔記",
+        "desc": "一位前甲方首席分析师的轉型日記 — 團隊配置、工具栈、踩坑清單。",
+        "btn": "查看全文 →"
+      }
+    },
+    "c4": {
+      "tag": "客戶案例",
+      "title": "某中型航司 6 个月上线 RMS，收益 +9.4%",
+      "desc": "匿名化案例 — 決策路径、迁移方案、踩坑清單、最終收益曲线（已脱敏）。",
+      "btn": "看案例 →"
+    },
+    "c5": {
+      "tag": "視頻",
+      "title": "12 分鐘看懂雲原生 RMS 架構",
+      "desc": "CTO 在 ArchSummit 上的分享回放 — 從單机到全球边缘节点，架構與權衡。",
+      "btn": "觀看 →"
+    },
+    "c6": {
+      "tag": "播客",
+      "title": "航線之后 · 第 17 集：調度員的早晨 4 点",
+      "desc": "实錄一位調度員的日常 — 決策、压力、協作、工具與他最想要的 AI 助手能力。",
+      "btn": "聽 →"
+    },
+    "meta": {
+      "minutes": "閱讀时間",
+      "pdf": "PDF · 3.8 MB",
+      "author": "作者 · 阿拓",
+      "case": "案例 · 2026 Q1",
+      "video": "視頻 · 12 分鐘",
+      "subtitles": "中英字幕",
+      "audio": "音頻 · 42 分鐘"
+    },
+    "filter": {
+      "all": "全部",
+      "wp": "白皮書",
+      "case": "客戶案例",
+      "video": "視頻 / 播客",
+      "blog": "博客"
+    },
+    "view_all": "查看全部資源 →",
+    "default_count": "显示 6 个資源"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "關於邁途數創",
+    "heading": "植根海南自貿港，專註民航數位化",
+    "p1": "海南邁途數創科技有限公司（Hainan Mito Transport Intelligence Co., Ltd.），成立於 2025 年 1 月，是一家植根於中国海南自由贸易港核心区域 — 海口的創新型科技企業。",
+    "p2": "公司立足海南蓬勃發展的战略机遇，專註於以數位化、智能化技術赋能产業升級，致力於成為大交通及旅游领域卓越的技術服務提供商。",
+    "p3": "主要提供航空市場及數據業務解決方案諮詢、规劃、資訊化建设落地等服務，助力航空公司實現商業價值最大化。",
+    "values_title": "我們的價值觀",
+    "values": {
+      "v1": {
+        "title": "專業",
+        "desc": "團隊 90%+ 來自民航行業，平均 10+ 年經驗。"
+      },
+      "v2": {
+        "title": "敏捷",
+        "desc": "Scrum + DevOps，2–4 週可上线一个模塊。"
+      },
+      "v3": {
+        "title": "長期主義",
+        "desc": "我們做的是能持續迭代 10 年的系統。"
+      }
+    },
+    "team": {
+      "eyebrow": "Our Team",
+      "title": "我們的團隊",
+      "subtitle": "一支兼具民航業務深度與技術工程能力的複合型團隊，植根海南自貿港，面向全球民航業。",
+      "members": {
+        "value": "30+",
+        "label": "核心成員",
+        "desc": "產品、研發、諮詢、實施、營運多崗位協同"
+      },
+      "expert": {
+        "value": "90%+",
+        "label": "行業專家",
+        "desc": "具備 10+ 年民航 / IT 諮詢背景"
+      },
+      "pm": {
+        "value": "12+",
+        "label": "資深產品經理",
+        "desc": "來自航空公司、信通院、領先 SaaS"
+      },
+      "tech": {
+        "value": "15+",
+        "label": "高級技術專家",
+        "desc": "雲原生 / 大數據 / 演算法工程"
+      }
+    }
+  },
+  "news": {
+    "eyebrow": "Newsroom",
+    "title": "最新動態",
+    "items": {
+      "n1": {
+        "date": "2026-06-15",
+        "tag": "客戶簽約",
+        "title": "邁途數創與某区域航司达成運價管理項目合作"
+      },
+      "n2": {
+        "date": "2026-05-20",
+        "tag": "產品發布",
+        "title": "航線網絡优化 NPS 2.0 上线"
+      },
+      "n3": {
+        "date": "2026-04-08",
+        "tag": "公司動態",
+        "title": "邁途數創海口研發中心正式投入營運"
+      }
+    },
+    "more": "查看全部新闻"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "與邁途數創共建下一代航司",
+    "desc": "填寫表單或直接拨打銷售热线 — 我們會在 1 个工作日内回复。",
+    "form": {
+      "name": "您的姓名",
+      "company": "所在公司",
+      "role": "您的职位",
+      "email": "企業信箱",
+      "phone": "聯絡電話",
+      "interest": "諮詢主題",
+      "interest_options": {
+        "rm": "收益管理 RMS",
+        "pricing": "運價管理 PMS",
+        "network": "航線網路 NPS",
+        "ops": "航班主控 OFC",
+        "retail": "分銷與電商",
+        "data": "數據中台與智能分析",
+        "other": "其他"
+      },
+      "message": "想諮詢的問題（可選）",
+      "submit": "提交諮詢",
+      "success": "提交成功！我們會在 3 個工作日內主動聯絡您。",
+      "error": "提交失败，請稍后再試或直接郵件聯絡。",
+      "product": "關注的產品",
+      "product_default": "請選擇產品",
+      "product_options": {
+        "rms": "收益管理系統",
+        "pms": "運價管理系統",
+        "nps": "航線網路管理",
+        "ofc": "航班主控管理",
+        "dps": "分銷與電商",
+        "data": "數據中台與智能分析",
+        "oneorder": "One Order 訂單管理",
+        "ndc": "NDC API 銷售服務",
+        "irregular": "不正常航班保障",
+        "other": "其他"
+      },
+      "sending": "正在發送 / Sending…",
+      "submitted": "✓ 已提交 / Submitted",
+      "retry": "重試 / Retry",
+      "error_required": "請填寫所有必填項 / Please fill required fields",
+      "error_product": "請選擇產品 / Please select a product",
+      "error_email": "請輸入有效的電子郵件地址",
+      "error_send": "發送失敗，已為您儲存到本機，請稍後再試。",
+      "name_ph": "例如 李明",
+      "company_ph": "例如 海南航空有限公司",
+      "phone_ph": "例如 +886 9 0000 0000（選填）",
+      "email_ph": "例如 lihang at hnair dot com",
+      "product_ph": "例如 收益管理 / 運價管理 / 航線網路 / 航班主控 / 其他",
+      "message_ph": "可以簡單描述貴司目前痛點、希望優先了解的產品 / 功能 / 解決方案；如有對接時間窗口也請告知。",
+      "error_required_name": "請填寫您的姓名",
+      "error_required_company": "請填寫所在公司",
+      "error_required_email": "請填寫企業電子郵件",
+      "error_required_product": "請選擇關注的產品",
+      "success_detail": "您可以同時瀏覽我們的白皮書與產品資料，更全面地了解邁途數創。",
+      "success_cta_resources": "查看行業資源",
+      "success_cta_home": "返回首頁"
+    },
+    "info": {
+      "hq": "總部地址",
+      "hq_value": "海南省海口市 · 海口国家高新区",
+      "sales": "銷售热线",
+      "sales_value": "+86 0898-8888-XXXX",
+      "email": "商務信箱",
+      "email_value": "hello (at) mito-aero.com",
+      "media": "媒體合作",
+      "media_value": "press (at) mito-aero.com"
+    }
+  },
+  "careers": {
+    "title": "我們在招",
+    "subtitle": "如果你也相信「讓中國民航數位化」這件事 — 我們想認識你。"
+  },
+  "footer": {
+    "tagline": "邁途數創 · 讓航空公司數位化，從海南連接世界",
+    "col_products": "產品",
+    "col_company": "公司",
+    "col_resources": "資源",
+    "col_legal": "法律",
+    "products": {
+      "rm": "收益管理",
+      "pricing": "運價管理",
+      "network": "航線網路",
+      "ops": "航班主控",
+      "retail": "分銷電商",
+      "data": "數據智能"
+    },
+    "company": {
+      "about": "關於我們",
+      "team": "團隊",
+      "news": "最新動態",
+      "careers": "加入我們",
+      "contact": "聯絡我們"
+    },
+    "resources": {
+      "blog": "部落格",
+      "whitepapers": "白皮書",
+      "case_studies": "案例研究",
+      "api_docs": "API 文檔"
+    },
+    "legal": {
+      "privacy": "隱私政策",
+      "terms": "服務條款",
+      "icp": "ICP 備案號"
+    },
+    "icp_text": "瓊 ICP 備 XXXXXXXX 號",
+    "copyright": "© 2026 海南邁途數創科技有限公司 版權所有",
+    "brand_name": "邁途數創"
+  },
+  "newsletter": {
+    "title": "每兩週一封 · 我們只寫值得留信箱的内容",
+    "desc": "邁途團隊出品：1 篇深度行業洞察 + 3 條值得讀的民航資訊。无骚扰。",
+    "submit": "訂閱",
+    "consent": "訂閱即代表同意接收電子郵件 — 您可隨時取消。"
+  },
+  "lang": {
+    "options": {
+      "zhCN": {
+        "label": "簡體中文"
+      },
+      "zhTW": {
+        "label": "繁體中文"
+      },
+      "enUS": {
+        "label": "English"
+      }
+    }
+  },
+  "home": {
+    "ticker": {
+      "airlines": {
+        "label": "已上線航空公司",
+        "value": "10+"
+      },
+      "prices": {
+        "label": "今日處理定價指令",
+        "value": "3,210,402"
+      },
+      "flights": {
+        "label": "本月調度航班",
+        "value": "184,260"
+      },
+      "latency": {
+        "label": "平均查詢延遲",
+        "value": "86 ms"
+      }
+    }
+  }
+}
+
+
+
+
+
