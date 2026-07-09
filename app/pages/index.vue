@@ -471,31 +471,6 @@
       </div>
     </section>
 
-    <!-- =========================== NEWSLETTER =========================== -->
-    <section class="section--tight">
-      <div class="container">
-        <form class="newsletter reveal" @submit.prevent="onNewsletterSubmit">
-          <h2>{{ $t("newsletter.title") }}</h2>
-          <p>{{ $t("newsletter.desc") }}</p>
-          <div class="newsletter__form">
-            <input
-              v-model="newsletterEmail"
-              type="email"
-              required
-              :placeholder="$t('newsletter.placeholder')"
-            />
-            <button class="btn btn-primary" type="submit" :disabled="newsletterSubmitting">
-              {{ $t("newsletter.submit") }}
-            </button>
-          </div>
-          <small class="newsletter__small">{{ $t("newsletter.small") }}</small>
-          <p v-if="newsletterStatus" class="form__status" :class="newsletterStatusClass">
-            {{ newsletterStatus }}
-          </p>
-        </form>
-      </div>
-    </section>
-
     <!-- =========================== ABOUT Mission/Team/Values =========================== -->
     <section id="about" class="section">
       <div class="container">
@@ -1041,31 +1016,6 @@ async function onContactSubmit() {
     contactStatus.value = err?.message || "提交失败,请稍后重试"
   } finally {
     contactSubmitting.value = false
-  }
-}
-
-const newsletterEmail = ref("")
-const newsletterSubmitting = ref(false)
-const newsletterStatus = ref("")
-const newsletterStatusClass = ref("")
-async function onNewsletterSubmit() {
-  if (newsletterSubmitting.value) return
-  newsletterSubmitting.value = true
-  newsletterStatusClass.value = "is-loading"
-  newsletterStatus.value = "正在订阅..."
-  try {
-    await $fetch("/api/newsletter", {
-      method: "POST",
-      body: { email: newsletterEmail.value }
-    })
-    newsletterStatusClass.value = "is-success"
-    newsletterStatus.value = "订阅成功!"
-    newsletterEmail.value = ""
-  } catch (err: any) {
-    newsletterStatusClass.value = "is-error"
-    newsletterStatus.value = err?.message || "订阅失败"
-  } finally {
-    newsletterSubmitting.value = false
   }
 }
 
