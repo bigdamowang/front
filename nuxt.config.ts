@@ -14,13 +14,22 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "MitoAI Technology",
+      title: "迈途数创 Mito — 航司商业运营数字化系统",
       htmlAttrs: {
         lang: "zh-CN"
       },
       meta: [
         { name: "description", content: "国际航司业务服务商 - 数字化转型解决方案" },
         { name: "keywords", content: "航空,数字化,解决方案,IT服务" }
+      ],
+      link: [
+        // Inter 无衬线字体（对齐 Amadeus / PROS 的国际化排版气质）
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        }
       ]
     }
   },

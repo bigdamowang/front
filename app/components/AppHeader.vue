@@ -57,7 +57,6 @@ const navItems = [
   { id: "solutions", key: "nav.products" },
   { id: "technology", key: "nav.tech" },
   { id: "customers", key: "nav.customers" },
-  { id: "about", key: "nav.about" },
   { id: "contact", key: "nav.contact" }
 ]
 
@@ -102,8 +101,9 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .app-header {
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border, #e4e9f0);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -134,19 +134,19 @@ onBeforeUnmount(() => {
 }
 
 .logo-text-primary {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  font-size: 1.75rem;
-  font-weight: 300;
-  letter-spacing: 0.04em;
-  color: var(--text-primary, #0f172a);
+  font-family: var(--font-sans, 'Inter', system-ui, sans-serif);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text-primary, #0f1d33);
   line-height: 1;
 }
 
 .logo-text-secondary {
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  color: var(--brand-primary, #4fa3d9);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--brand-primary, #1857b8);
   line-height: 1;
 }
 

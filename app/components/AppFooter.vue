@@ -3,7 +3,7 @@
     <div class="footer-container">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>MitoAI Technology</h3>
+          <h3>迈途数创 <span class="footer-brand-en">Mito</span></h3>
           <p>{{ $t("footer.description") }}</p>
         </div>
         <div class="footer-section">
@@ -13,18 +13,17 @@
             <li><a href="#solutions" @click="scrollTo('solutions', $event)">{{ $t("nav.products") }}</a></li>
             <li><a href="#technology" @click="scrollTo('technology', $event)">{{ $t("nav.tech") }}</a></li>
             <li><a href="#customers" @click="scrollTo('customers', $event)">{{ $t("nav.customers") }}</a></li>
-            <li><a href="#about" @click="scrollTo('about', $event)">{{ $t("nav.about") }}</a></li>
             <li><a href="#contact" @click="scrollTo('contact', $event)">{{ $t("nav.contact") }}</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h4>{{ $t("footer.contact") }}</h4>
           <p>{{ $t("footer.email") }}: contact@mitoaitech.com</p>
-          <p>{{ $t("footer.phone") }}: +86 400-xxx-xxxx</p>
+          <p>{{ $t("contact.info.addressDetail", "海南自由贸易港 · 海口") }}</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; {{ currentYear }} MitoAI Technology. All rights reserved.</p>
+        <p>&copy; {{ currentYear }} 海南迈途数创科技有限公司 · Mito. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -46,10 +45,14 @@ function scrollTo(id: string, e: Event) {
 
 <style scoped>
 .app-footer {
-  background: #2c3e50;
+  background: var(--bg-deep, #0b1b33);
   color: #fff;
-  padding: 40px 0 20px;
-  margin-top: 60px;
+  padding: 56px 0 24px;
+}
+
+.footer-brand-en {
+  color: var(--brand-cyan, #2e8bc9);
+  font-weight: 700;
 }
 
 .footer-container {
