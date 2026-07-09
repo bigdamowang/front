@@ -46,13 +46,7 @@
     <div class="hero__business-visual" aria-hidden="true">
       <!-- 路线图 -->
       <div class="route-panel">
-        <div class="route-panel__head">
-          <span class="route-panel__title">
-            <svg class="route-panel__title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
-            Route network
-          </span>
-          <strong class="route-panel__iata">PEK / SHA / CAN / HKG</strong>
-        </div>
+
         <div class="route-map">
           <svg class="route-globe" viewBox="0 0 520 240" role="img" aria-label="Airline route network">
             <defs>
@@ -539,56 +533,136 @@
     <!-- =========================== CONTACT =========================== -->
     <section id="contact" class="section">
       <div class="container">
-        <div class="contact-grid">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">{{ $t("contact.eyebrow") }}</span>
+          <h2>{{ $t("contact.title") }}</h2>
+          <p>{{ $t("contact.subtitle") }}</p>
+        </div>
+
+        <div class="contact-grid reveal">
+          <!-- 左侧: 公司信息 + 商务引导 -->
           <div class="contact-info">
-            <span class="eyebrow">{{ $t("contact.eyebrow") }}</span>
-            <h2>{{ $t("contact.title") }}</h2>
-            <p>{{ $t("contact.subtitle") }}</p>
+            <div class="contact-info__intro">
+              <h3 class="contact-info__heading">{{ $t("contact.info.heading", "直接联系商务团队") }}</h3>
+              <p class="contact-info__desc">{{ $t("contact.info.intro", "我们的方案顾问会基于您的航线网络、客舱结构和现有系统栈,1 个工作日内回复专属方案与报价。") }}</p>
+            </div>
+
             <ul class="contact-list">
-              <li>
-                <span class="contact-list__label">{{ $t("contact.info.email") }}</span>
-                <span class="contact-list__value">contact@mitoaitech.com</span>
+              <li class="contact-list__item">
+                <div class="contact-list__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                </div>
+                <div class="contact-list__body">
+                  <span class="contact-list__label">{{ $t("contact.info.email") }}</span>
+                  <a class="contact-list__value" href="mailto:contact@mitoaitech.com">contact@mitoaitech.com</a>
+                </div>
               </li>
-              <li>
-                <span class="contact-list__label">{{ $t("contact.info.phone") }}</span>
-                <span class="contact-list__value">+86 400-xxx-xxxx</span>
+              <li class="contact-list__item">
+                <div class="contact-list__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-list__body">
+                  <span class="contact-list__label">{{ $t("contact.info.phone") }}</span>
+                  <a class="contact-list__value" href="tel:+864000000000">+86 400-xxx-xxxx</a>
+                </div>
               </li>
-              <li>
-                <span class="contact-list__label">{{ $t("contact.info.address") }}</span>
-                <span class="contact-list__value">{{ $t("contact.info.addressDetail") }}</span>
+              <li class="contact-list__item">
+                <div class="contact-list__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-list__body">
+                  <span class="contact-list__label">{{ $t("contact.info.address") }}</span>
+                  <span class="contact-list__value">{{ $t("contact.info.addressDetail") }}</span>
+                </div>
               </li>
             </ul>
+
+            <!-- 信任徽章 / SLA 承诺 -->
+            <div class="contact-info__badges">
+              <div class="contact-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>{{ $t("contact.info.badge1", "1 个工作日内回复") }}</span>
+              </div>
+              <div class="contact-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z"/></svg>
+                <span>{{ $t("contact.info.badge2", "信息严格保密") }}</span>
+              </div>
+              <div class="contact-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                <span>{{ $t("contact.info.badge3", "免费方案咨询") }}</span>
+              </div>
+            </div>
           </div>
 
-          <form class="card" style="padding: var(--sp-6);" @submit.prevent="onContactSubmit">
-            <h3 style="margin-bottom: var(--sp-4);">{{ $t("contact.form.title") }}</h3>
-            <label style="display:flex; flex-direction:column; gap:6px; margin-bottom: var(--sp-3); font-size:14px; font-weight:500; color:var(--text-secondary);">
-              <span>{{ $t("contact.form.name") }}</span>
-              <input v-model="form.name" type="text" name="name" required :placeholder="$t('contact.form.name')" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
+          <!-- 右侧: 提交表单 -->
+          <form class="contact-form" @submit.prevent="onContactSubmit">
+            <div class="contact-form__head">
+              <h3>{{ $t("contact.form.title") }}</h3>
+              <span class="contact-form__sub">{{ $t("contact.form.sub", "所有信息仅用于方案沟通") }}</span>
+            </div>
+
+            <div class="form-grid">
+              <label class="form-field">
+                <span class="form-field__label">{{ $t("contact.form.name") }} <em>*</em></span>
+                <div class="form-field__wrap">
+                  <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <input v-model="form.name" type="text" name="name" required :placeholder="$t('contact.form.namePh', '请输入您的姓名')" autocomplete="name" />
+                </div>
+              </label>
+
+              <label class="form-field">
+                <span class="form-field__label">{{ $t("contact.form.email") }} <em>*</em></span>
+                <div class="form-field__wrap">
+                  <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                  <input v-model="form.email" type="email" name="email" required :placeholder="$t('contact.form.emailPh', 'name@company.com')" autocomplete="email" />
+                </div>
+              </label>
+
+              <label class="form-field">
+                <span class="form-field__label">{{ $t("contact.form.company", "公司") }}</span>
+                <div class="form-field__wrap">
+                  <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+                  <input v-model="form.company" type="text" name="company" :placeholder="$t('contact.form.companyPh', '海南航空 / Air China')" autocomplete="organization" />
+                </div>
+              </label>
+
+              <label class="form-field">
+                <span class="form-field__label">{{ $t("contact.form.role", "您的角色") }}</span>
+                <div class="form-field__wrap">
+                  <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg>
+                  <input v-model="form.role" type="text" name="role" :placeholder="$t('contact.form.rolePh', '收益总监 / 信息化负责人')" />
+                </div>
+              </label>
+            </div>
+
+            <label class="form-field form-field--full">
+              <span class="form-field__label">{{ $t("contact.form.message") }} <em>*</em></span>
+              <div class="form-field__wrap form-field__wrap--textarea">
+                <svg class="form-field__icon form-field__icon--top" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <textarea v-model="form.message" name="message" rows="4" required :placeholder="$t('contact.form.messagePh', '请简述您的业务场景、痛点、期望的方案类型 (收益管理 / 航线网络 / 数据中台…)')"></textarea>
+              </div>
             </label>
-            <label style="display:flex; flex-direction:column; gap:6px; margin-bottom: var(--sp-3); font-size:14px; font-weight:500; color:var(--text-secondary);">
-              <span>{{ $t("contact.form.email") }}</span>
-              <input v-model="form.email" type="email" name="email" required :placeholder="$t('contact.form.email')" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
-            </label>
-            <label style="display:flex; flex-direction:column; gap:6px; margin-bottom: var(--sp-3); font-size:14px; font-weight:500; color:var(--text-secondary);">
-              <span>{{ $t("contact.form.company", "公司") }}</span>
-              <input v-model="form.company" type="text" name="company" :placeholder="$t('contact.form.company', '公司')" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
-            </label>
-            <label style="display:flex; flex-direction:column; gap:6px; margin-bottom: var(--sp-3); font-size:14px; font-weight:500; color:var(--text-secondary);">
-              <span>{{ $t("contact.form.message") }}</span>
-              <textarea v-model="form.message" name="message" rows="5" required :placeholder="$t('contact.form.message')" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff; font-family: inherit;"></textarea>
-            </label>
-            <div class="form__actions">
-              <button class="btn btn-primary" type="submit" :disabled="contactSubmitting">
-                {{ $t("contact.form.submit") }}
-              </button>
-              <span
-                class="form__status"
-                :class="contactStatusClass"
-                :aria-live="'polite'"
-              >
-                {{ contactStatus }}
+
+            <div class="form__actions form__actions--between">
+              <span class="form__privacy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                {{ $t("contact.form.privacy", "提交即同意我们将信息仅用于本次沟通") }}
               </span>
+              <div class="form__submit-group">
+                <button class="btn btn-primary btn-submit" type="submit" :disabled="contactSubmitting">
+                  <span class="btn-submit__label">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+                    {{ $t("contact.form.submit") }}
+                  </span>
+                </button>
+                <span
+                  class="form__status"
+                  :class="contactStatusClass"
+                  :aria-live="'polite'"
+                >
+                  {{ contactStatus }}
+                </span>
+              </div>
             </div>
           </form>
         </div>
@@ -944,7 +1018,7 @@ const timeline = [
 ]
 
 /* ===================== 表单 ===================== */
-const form = reactive({ name: "", email: "", company: "", message: "" })
+const form = reactive({ name: "", email: "", company: "", role: "", message: "" })
 const contactSubmitting = ref(false)
 const contactStatus = ref("")
 const contactStatusClass = ref("")
@@ -957,11 +1031,11 @@ async function onContactSubmit() {
     // 直接走 $fetch(不引 service/* 链路)
     await $fetch("/api/contact", {
       method: "POST",
-      body: { name: form.name, email: form.email, message: form.message }
+      body: { name: form.name, email: form.email, company: form.company, role: form.role, message: form.message }
     })
     contactStatusClass.value = "is-success"
     contactStatus.value = "提交成功,我们会尽快与您联系!"
-    Object.assign(form, { name: "", email: "", company: "", message: "" })
+    Object.assign(form, { name: "", email: "", company: "", role: "", message: "" })
   } catch (err: any) {
     contactStatusClass.value = "is-error"
     contactStatus.value = err?.message || "提交失败,请稍后重试"

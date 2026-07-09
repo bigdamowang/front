@@ -632,9 +632,21 @@
       "error_required_product": "请选择关注的产品",
       "success_detail": "您可以同时浏览我们的白皮书与产品资料，更全面地了解迈途数创。",
       "success_cta_resources": "查看行业资源",
-      "success_cta_home": "返回首页"
+      "success_cta_home": "返回首页",
+      "sub": "所有信息仅用于方案沟通",
+      "namePh": "请输入您的姓名",
+      "emailPh": "name{'@'}company.com",
+      "companyPh": "海南航空 / Air China",
+      "rolePh": "收益总监 / 信息化负责人",
+      "messagePh": "请简述您的业务场景、痛点、期望的方案类型 (收益管理 / 航线网络 / 数据中台…)",
+      "privacy": "提交即同意我们将信息仅用于本次沟通"
     },
     "info": {
+      "heading": "直接联系商务团队",
+      "intro": "我们的方案顾问会基于您的航线网络、客舱结构和现有系统栈，1 个工作日内回复专属方案与报价。",
+      "badge1": "1 个工作日内回复",
+      "badge2": "信息严格保密",
+      "badge3": "免费方案咨询",
       "hq": "总部地址",
       "hq_value": "海南省海口市 · 海口国家高新区",
       "sales": "销售热线",

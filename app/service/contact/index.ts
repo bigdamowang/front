@@ -6,6 +6,8 @@ import baseService from "@/service/baseService"
 export const submitContactForm = (data: {
   name: string
   email: string
+  company?: string
+  role?: string
   message: string
 }) => {
   return baseService.post("/api/contact", data)

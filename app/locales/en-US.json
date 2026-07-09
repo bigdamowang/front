@@ -527,9 +527,21 @@
       "error_required_product": "Please pick a product",
       "success_detail": "In the meantime feel free to browse our whitepapers and product briefs.",
       "success_cta_resources": "Browse resources",
-      "success_cta_home": "Back to home"
+      "success_cta_home": "Back to home",
+      "sub": "Your information is used only for this enquiry",
+      "namePh": "Your full name",
+      "emailPh": "name{'@'}company.com",
+      "companyPh": "Hainan Airlines / Air China",
+      "rolePh": "Director of Revenue / Head of IT",
+      "messagePh": "Briefly describe your business scenario, pain points, and the solution area you're interested in (RMS / Pricing / Network / Data Platform…)",
+      "privacy": "By submitting you agree we'll only use this information for this enquiry"
     },
     "info": {
+      "heading": "Talk to our solutions team",
+      "intro": "Our solution consultants will respond within 1 business day with a tailored proposal based on your route network, cabin mix and existing system stack.",
+      "badge1": "Reply within 1 business day",
+      "badge2": "Information kept confidential",
+      "badge3": "Free consultation",
       "hq": "Headquarters",
       "hq_value": "Haikou National High-Tech Zone, Hainan, China",
       "sales": "Sales",
