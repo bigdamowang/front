@@ -87,5 +87,16 @@ export default defineNuxtConfig({
   },
 
   // 兼容性日期
-  compatibilityDate: "2024-07-09"
+  compatibilityDate: "2024-07-09",
+
+  // 环境配置: API baseURL + 3 环境
+  // 优先级: NUXT_PUBLIC_API_BASE > 环境默认
+  // dev:   http://localhost:3000     (node/server.js)
+  // prod:  https://api.mitoaitech.com (假设)
+  runtimeConfig: {
+    public: {
+      apiBase: process.env.NUXT_PUBLIC_API_BASE
+        || (process.env.NODE_ENV === "production" ? "https://api.mitoaitech.com" : "http://localhost:3000")
+    }
+  }
 })

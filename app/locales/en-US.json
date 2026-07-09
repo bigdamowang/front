@@ -480,6 +480,8 @@
       "role": "Role",
       "email": "Work email",
       "phone": "Phone",
+      "phonePh": "+86 138 0000 0000",
+      "optional": "optional",
       "interest": "Topic",
       "interest_options": {
         "rm": "Revenue Mgmt (RMS)",

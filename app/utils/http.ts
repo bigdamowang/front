@@ -4,10 +4,35 @@ import { getToken, getRefreshToken, getCache, setCache } from "./cache"
 import { getValueByKeys } from "./utils"
 
 /**
+ * 获取 API baseURL
+ * 优先级: runtimeConfig.public.apiBase (环境变量) > constants/app.ts 的 getter (兼容旧逻辑) > ""
+ */
+const getApiBase = (): string => {
+  if (typeof window === "undefined") {
+    // SSR / prerender 阶段
+    try {
+      return (useRuntimeConfig().public.apiBase as string) || import.meta.env.VITE_APP_API || ""
+    } catch {
+      return import.meta.env.VITE_APP_API || ""
+    }
+  }
+  // 浏览器阶段
+  try {
+    const cfg = (window as any).SITE_CONFIG
+    return (cfg && cfg.apiURL)
+      || (useRuntimeConfig().public.apiBase as string)
+      || import.meta.env.VITE_APP_API
+      || ""
+  } catch {
+    return import.meta.env.VITE_APP_API || ""
+  }
+}
+
+/**
  * 创建HTTP请求实例
  */
 const http = $fetch.create({
-  baseURL: app.api,
+  baseURL: getApiBase(),
   timeout: app.requestTimeout,
   headers: {
     "X-Requested-With": "XMLHttpRequest"
@@ -28,9 +53,8 @@ const http = $fetch.create({
     const status = response.status
     const data = response._data as any
 
-    // 401 未授权
+    // 401 未授权 - 尝试刷新 token (v8 当前不消费,但保留 v6 行为以备未来接入)
     if (status === 401) {
-      // 尝试刷新token
       const refreshToken = getRefreshToken()
       if (refreshToken) {
         try {
@@ -42,7 +66,6 @@ const http = $fetch.create({
             access_token: tokenData.data.access_token
           }
           setCache("CacheToken", token, false)
-          // 重试原请求
           return $fetch(response.config.url, {
             ...response.config,
             headers: {
@@ -51,7 +74,6 @@ const http = $fetch.create({
             }
           })
         } catch (e) {
-          // 刷新失败，跳转登录页
           navigateTo("/login")
         }
       } else {
@@ -59,9 +81,9 @@ const http = $fetch.create({
       }
     }
 
-    // 错误提示
-    const errorMsg = data?.msg || "请求失败"
-    console.error(errorMsg)
+    // 错误日志
+    const errorMsg = data?.msg || `HTTP ${status}`
+    console.error(`[http] ${response.config?.method?.toUpperCase() || ""} ${response.config?.url || ""} → ${status}: ${errorMsg}`)
   }
 })
 

@@ -1213,6 +1213,44 @@ a.contact-list__value:hover { color: var(--brand-primary-dark); }
   opacity: 0.7;
 }
 
+/* select 下拉(关注产品) */
+.form-field__wrap--select {
+  padding-right: 42px;
+}
+.form-field__select {
+  flex: 1; min-width: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none; outline: none; background: transparent;
+  font-family: inherit; font-size: 15px;
+  color: var(--text-primary, #0f172a);
+  padding: 14px 0;
+  cursor: pointer;
+  /* 隐藏 IE/Edge 默认下拉箭头 */
+}
+.form-field__select::-ms-expand { display: none; }
+.form-field__select:invalid,
+.form-field__select option[value=""]:checked { color: var(--text-muted, #94a3b8); }
+.form-field__caret {
+  position: absolute;
+  right: 14px; top: 50%;
+  transform: translateY(-50%);
+  width: 16px; height: 16px;
+  color: var(--text-muted, #94a3b8);
+  flex-shrink: 0;
+  pointer-events: none;
+  transition: color var(--dur-base) var(--ease), transform var(--dur-base) var(--ease);
+}
+.form-field__wrap:focus-within .form-field__caret { color: var(--brand-primary); }
+.form-field__label em.optional {
+  color: var(--text-muted, #94a3b8);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
 /* form__actions 升级 */
 .form__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
 .form__actions--between { justify-content: space-between; gap: 16px; }

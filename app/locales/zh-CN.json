@@ -585,6 +585,8 @@
       "role": "您的职位",
       "email": "企业邮箱",
       "phone": "联系电话",
+      "phonePh": "+86 138 0000 0000",
+      "optional": "可选",
       "interest": "咨询主题",
       "interest_options": {
         "rm": "收益管理 RMS",

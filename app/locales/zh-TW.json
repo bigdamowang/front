@@ -486,6 +486,8 @@
       "role": "您的职位",
       "email": "企業信箱",
       "phone": "聯絡電話",
+      "phonePh": "+86 138 0000 0000",
+      "optional": "可選",
       "interest": "諮詢主題",
       "interest_options": {
         "rm": "收益管理 RMS",

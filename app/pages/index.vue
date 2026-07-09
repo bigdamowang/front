@@ -296,15 +296,41 @@
               </label>
 
               <label class="form-field">
-                <span class="form-field__label">{{ $t("contact.form.company", "公司") }}</span>
+                <span class="form-field__label">{{ $t("contact.form.phone", "联系电话") }} <em>*</em></span>
                 <div class="form-field__wrap">
-                  <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
-                  <input v-model="form.company" type="text" name="company" :placeholder="$t('contact.form.companyPh', '海南航空 / Air China')" autocomplete="organization" />
+                  <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <input v-model="form.phone" type="tel" name="phone" required :placeholder="$t('contact.form.phonePh', '+86 138 0000 0000')" autocomplete="tel" />
                 </div>
               </label>
 
               <label class="form-field">
-                <span class="form-field__label">{{ $t("contact.form.role", "您的角色") }}</span>
+                <span class="form-field__label">{{ $t("contact.form.company", "所在公司") }} <em>*</em></span>
+                <div class="form-field__wrap">
+                  <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+                  <input v-model="form.company" type="text" name="company" required :placeholder="$t('contact.form.companyPh', '海南航空 / Air China')" autocomplete="organization" />
+                </div>
+              </label>
+
+              <label class="form-field form-field--full">
+                <span class="form-field__label">{{ $t("contact.form.product", "关注的产品") }} <em>*</em></span>
+                <div class="form-field__wrap form-field__wrap--select">
+                  <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-7"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+                  <select v-model="form.product" name="product" required class="form-field__select">
+                    <option value="" disabled>{{ $t('contact.form.productDefault', '请选择您关注的产品方向') }}</option>
+                    <option value="收益管理系统">{{ $t('contact.form.productOptions.rms', '收益管理系统 RMS') }}</option>
+                    <option value="运价管理系统">{{ $t('contact.form.productOptions.pms', '运价管理系统 PMS') }}</option>
+                    <option value="航线网络管理">{{ $t('contact.form.productOptions.nps', '航线网络管理 NPS') }}</option>
+                    <option value="航班主控管理">{{ $t('contact.form.productOptions.ofc', '航班主控管理 OFC') }}</option>
+                    <option value="数据中台与智能分析">{{ $t('contact.form.productOptions.data', '数据中台与智能分析') }}</option>
+                    <option value="NDC API 销售服务">{{ $t('contact.form.productOptions.ndc', 'NDC API 销售服务') }}</option>
+                    <option value="其他">{{ $t('contact.form.productOptions.other', '其他 / 暂未确定') }}</option>
+                  </select>
+                  <svg class="form-field__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+              </label>
+
+              <label class="form-field form-field--full">
+                <span class="form-field__label">{{ $t("contact.form.role", "您的角色") }} <em class="optional">({{ $t('contact.form.optional', '可选') }})</em></span>
                 <div class="form-field__wrap">
                   <svg class="form-field__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg>
                   <input v-model="form.role" type="text" name="role" :placeholder="$t('contact.form.rolePh', '收益总监 / 信息化负责人')" />
@@ -349,6 +375,10 @@
 </template>
 
 <script setup lang="ts">
+/* ===================== Composables (规范化: 表单/统计走 service 链路) ===================== */
+import { useContactForm } from "@/composables/useContactForm"
+import { useHomeStats } from "@/composables/useHomeStats"
+
 /* ===================== SEO META ===================== */
 useSeoMeta({
   title: '迈途数创 Mito — 航司商业运营数字化系统 | 收益管理·运价·航线网络·数据中台',
@@ -481,7 +511,9 @@ const certifications = [
 ]
 
 /* ===================== KPI 计数 ===================== */
-const kpiBase = { airlines: 10, modules: 6, experts: 90, passengers: 1.2 }
+// 规范化: airline 数字优先从 useHomeStats.totalAirlines 读 (走 /api/stats)
+// 加载中或失败时使用 fallback
+const kpiBase = { airlines: computed(() => totalAirlines.value || 10), modules: 6, experts: 90, passengers: 1.2 }
 const kpiAirlines = ref(0)
 const kpiModules = ref(0)
 const kpiExperts = ref(0)
@@ -491,7 +523,7 @@ const kpiModulesEl = ref<HTMLElement | null>(null)
 const kpiExpertsEl = ref<HTMLElement | null>(null)
 const kpiPassengersEl = ref<HTMLElement | null>(null)
 
-const cuBase = { airlines: 10, years: 6, experts: 30, caps: 9 }
+const cuBase = { airlines: computed(() => totalAirlines.value || 10), years: 6, experts: 30, caps: 9 }
 const cuAirlines = ref(0)
 const cuYears = ref(0)
 const cuExperts = ref(0)
@@ -598,31 +630,36 @@ const caseStudies = [
   }
 ]
 
-/* ===================== 表单 ===================== */
-const form = reactive({ name: "", email: "", company: "", role: "", message: "" })
-const contactSubmitting = ref(false)
-const contactStatus = ref("")
-const contactStatusClass = ref("")
+/* ===================== 表单 (规范化: 走 service/contact 链路) ===================== */
+const {
+  form,
+  status: contactStatusRaw,
+  errorMessage: contactErrorMessage,
+  submit: submitContact
+} = useContactForm()
+const contactSubmitting = computed(() => contactStatusRaw.value === "loading")
+const contactStatus = computed(() => {
+  if (contactStatusRaw.value === "loading") return $t("contact.form.sending")
+  if (contactStatusRaw.value === "success") return $t("contact.form.success")
+  if (contactStatusRaw.value === "error") return contactErrorMessage.value
+  return ""
+})
+const contactStatusClass = computed(() => `is-${contactStatusRaw.value}`)
 async function onContactSubmit() {
-  if (contactSubmitting.value) return
-  contactSubmitting.value = true
-  contactStatusClass.value = "is-loading"
-  contactStatus.value = "正在提交..."
-  try {
-    await $fetch("/api/contact", {
-      method: "POST",
-      body: { name: form.name, email: form.email, company: form.company, role: form.role, message: form.message }
-    })
-    contactStatusClass.value = "is-success"
-    contactStatus.value = "提交成功，我们会尽快与您联系！"
-    Object.assign(form, { name: "", email: "", company: "", role: "", message: "" })
-  } catch (err: any) {
-    contactStatusClass.value = "is-error"
-    contactStatus.value = err?.message || "提交失败，请稍后重试"
-  } finally {
-    contactSubmitting.value = false
+  const ok = await submitContact()
+  if (ok) {
+    // 成功后 1.5s 重置表单
+    setTimeout(() => {
+      Object.assign(form, { name: "", email: "", company: "", phone: "", product: "", role: "", message: "" })
+    }, 1500)
   }
 }
+
+/* ===================== 首页统计 (规范化: 走 fetch /api/stats) ===================== */
+const { totalAirlines, totalRecords, load: loadHomeStats } = useHomeStats()
+onMounted(() => {
+  loadHomeStats()  // 客户端挂载后异步拉取,失败保留 fallback
+})
 
 /* ===================== 锚点跳转 / Reveal ===================== */
 function scrollTo(id: string, e: Event) {
@@ -658,9 +695,9 @@ onMounted(() => {
     ticker.latency = Math.max(72, Math.min(102, ticker.latency + (Math.random() > 0.5 ? 1 : -1)))
   }, 5000)
 
-  /* KPI 计数 */
+  /* KPI 计数 - 规范化: airlines 数字读 useHomeStats.totalAirlines (走 /api/stats) */
   const kpiMap: Array<[HTMLElement | null, number, number]> = [
-    [kpiAirlinesEl.value, kpiBase.airlines, 0],
+    [kpiAirlinesEl.value, unref(kpiBase.airlines), 0],
     [kpiModulesEl.value, kpiBase.modules, 0],
     [kpiExpertsEl.value, kpiBase.experts, 0],
     [kpiPassengersEl.value, kpiBase.passengers, 1]
@@ -679,7 +716,7 @@ onMounted(() => {
 
   /* Customers KPI 计数 */
   const cuMap: Array<[HTMLElement | null, number, number]> = [
-    [cuAirlinesEl.value, cuBase.airlines, 0],
+    [cuAirlinesEl.value, unref(cuBase.airlines), 0],
     [cuYearsEl.value, cuBase.years, 0],
     [cuExpertsEl.value, cuBase.experts, 0],
     [cuCapsEl.value, cuBase.caps, 0]
