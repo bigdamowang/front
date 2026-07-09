@@ -47,8 +47,11 @@
       <!-- 路线图 -->
       <div class="route-panel">
         <div class="route-panel__head">
-          <span>Route network</span>
-          <strong>PEK / SHA / CAN / HKG</strong>
+          <span class="route-panel__title">
+            <svg class="route-panel__title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+            Route network
+          </span>
+          <strong class="route-panel__iata">PEK / SHA / CAN / HKG</strong>
         </div>
         <div class="route-map">
           <svg class="route-globe" viewBox="0 0 520 240" role="img" aria-label="Airline route network">
@@ -134,19 +137,53 @@
       </div>
       <!-- 运营状态 -->
       <div class="ops-panel">
-        <div class="ops-panel__row"><span>RMS forecast</span><strong>+3.2%</strong></div>
-        <div class="ops-panel__bar"><i style="width: 72%"></i></div>
-        <div class="ops-panel__row"><span>Fare filing</span><strong>Ready</strong></div>
-        <div class="ops-panel__bar"><i style="width: 84%"></i></div>
-        <div class="ops-panel__row"><span>NDC orders</span><strong>18.4k</strong></div>
-        <div class="ops-panel__bar"><i style="width: 58%"></i></div>
+        <div class="ops-panel__row">
+          <span class="ops-panel__label">
+            <span class="ops-panel__dot ops-panel__dot--up"></span>
+            RMS forecast
+          </span>
+          <strong class="ops-panel__val ops-panel__val--up">+3.2%</strong>
+        </div>
+        <div class="ops-panel__bar"><i style="width: 72%; background: linear-gradient(90deg, #3DD9B6, #5BC8E8);"></i></div>
+        <div class="ops-panel__row">
+          <span class="ops-panel__label">
+            <span class="ops-panel__dot ops-panel__dot--ok"></span>
+            Fare filing
+          </span>
+          <strong class="ops-panel__val ops-panel__val--ok">Ready</strong>
+        </div>
+        <div class="ops-panel__bar"><i style="width: 84%; background: linear-gradient(90deg, var(--brand-primary), var(--brand-cyan));"></i></div>
+        <div class="ops-panel__row">
+          <span class="ops-panel__label">
+            <span class="ops-panel__dot ops-panel__dot--mid"></span>
+            NDC orders
+          </span>
+          <strong class="ops-panel__val">18.4k <em>/day</em></strong>
+        </div>
+        <div class="ops-panel__bar"><i style="width: 58%; background: linear-gradient(90deg, #2D86BF, #4FA3D9);"></i></div>
       </div>
       <!-- 运价控制 -->
       <div class="fare-panel">
-        <div><span>Route</span><span>Cabin</span><span>Action</span></div>
-        <div><strong>SHA-CAN</strong><span>M</span><em>Hold</em></div>
-        <div><strong>PEK-HKG</strong><span>Y</span><em>Open</em></div>
-        <div><strong>SHA-CTU</strong><span>K</span><em>Close</em></div>
+        <div class="fare-panel__head">
+          <span>Route</span>
+          <span>Cabin</span>
+          <span>Action</span>
+        </div>
+        <div class="fare-panel__row">
+          <strong>SHA-CAN</strong>
+          <span class="fare-panel__cabin">M</span>
+          <em class="fare-panel__action fare-panel__action--hold">Hold</em>
+        </div>
+        <div class="fare-panel__row">
+          <strong>PEK-HKG</strong>
+          <span class="fare-panel__cabin">Y</span>
+          <em class="fare-panel__action fare-panel__action--open">Open</em>
+        </div>
+        <div class="fare-panel__row">
+          <strong>SHA-CTU</strong>
+          <span class="fare-panel__cabin">K</span>
+          <em class="fare-panel__action fare-panel__action--close">Close</em>
+        </div>
       </div>
     </div>
   </header>
