@@ -274,13 +274,22 @@ ul {
   align-items: center;
   gap: 8px;
   padding: 12px 22px;
+  border: none;                    /* 显式去掉 button 默认 outline / 黑边 */
+  outline: none;                   /* 显式去掉 focus 黑框 */
   border-radius: var(--r-md);
+  font-family: inherit;            /* button 默认 fontFamily 不继承 */
   font-weight: 600;
   font-size: 15px;
+  line-height: 1.2;
   white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
   transition: transform var(--dur-base) var(--ease),
     box-shadow var(--dur-base) var(--ease), background var(--dur-base) var(--ease),
     border-color var(--dur-base) var(--ease);
+}
+.btn:focus-visible {              /* 键盘 focus 用蓝青光圈, 不影响鼠标 */
+  box-shadow: 0 0 0 4px rgba(91, 168, 224, 0.30);
 }
 
 .btn:hover {
