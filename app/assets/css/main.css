@@ -71,30 +71,31 @@ img {
  * Design tokens (from v7) — single source of truth
  * ============================================================ */
 :root {
-  /* Brand — 企业蓝为主，克制、稳重，对齐 Amadeus / PROS 的国际化气质 */
-  --brand-primary: #1857B8;
-  --brand-primary-dark: #0E3E86;
-  --brand-accent: #2D6FD6;
-  --brand-cyan: #2E8BC9;        /* 仅作极小面积点缀，去霓虹 */
-  --brand-mint: #1EA37A;        /* 状态用色（成功/上升），非发光 */
+  /* Brand — 企业蓝为主，沉稳内敛；高饱和仅用于小面积 CTA / 链接 */
+  --brand-primary: #1D4ED8;        /* 主色：略深、更沉稳的皇家蓝，一出现即显高级 */
+  --brand-primary-dark: #1740A6;   /* hover / pressed */
+  --brand-accent: #3B6FE0;         /* 高亮点缀 / 渐变浅端 */
+  --brand-cyan: #2E7FB8;           /* 极小面积点缀，去霓虹 */
+  --brand-mint: #12986C;           /* 状态用色（成功/上升），克制不荧光 */
 
-  /* Surfaces */
-  --bg-deep: #0B1B33;
-  --bg-deep-2: #12294A;
+  /* Surfaces — 灰阶收敛为接近中性的暖灰，降低整页冷调、更耐看 */
+  --bg-deep: #0A1729;              /* 深底：沉稳藏蓝，非纯蓝黑 */
+  --bg-deep-2: #122340;
   --bg-page: #FFFFFF;
-  --bg-soft: #F4F7FB;
+  --bg-soft: #F6F7F9;              /* 中性偏暖的浅灰，去蓝调，减少眩光 */
+  --bg-subtle: #FAFBFC;            /* 更浅一档，用于分区交替 */
   --bg-card: #FFFFFF;
 
-  /* Text */
-  --text-primary: #0F1D33;
-  --text-secondary: #475569;
-  --text-muted: #8A97A8;
-  --text-on-dark: #F8FAFC;
-  --text-on-dark-soft: #C6D2E2;
+  /* Text — 柔化冷硬感，长时间阅读更舒适 */
+  --text-primary: #16233A;         /* 标题：深而不冷硬 */
+  --text-secondary: #4B5563;       /* 正文：中性灰，非蓝灰 */
+  --text-muted: #8B93A1;
+  --text-on-dark: #F7F9FC;
+  --text-on-dark-soft: #C4D0E0;
 
-  /* Borders */
-  --border: #E4E9F0;
-  --border-strong: #CBD5E1;
+  /* Borders — 更柔更中性，弱化线条存在感 */
+  --border: #E7E9EE;
+  --border-strong: #D3D8E0;
   --border-on-dark: rgba(255, 255, 255, 0.12);
 
   /* Shadows — 更浅更柔的企业级阴影 */
@@ -359,7 +360,7 @@ ul {
 .card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(24, 87, 184, 0.28);
+  border-color: rgba(29, 78, 216, 0.28);
 }
 
 .card .icon {
@@ -536,7 +537,7 @@ ul {
   position: relative;
   padding: clamp(104px, 12vw, 152px) 0 clamp(64px, 8vw, 104px);
   background:
-    radial-gradient(900px 480px at 88% -8%, rgba(24, 87, 184, 0.06), transparent 62%),
+    radial-gradient(900px 480px at 88% -8%, rgba(29, 78, 216, 0.06), transparent 62%),
     linear-gradient(180deg, #FBFCFE 0%, #F4F7FB 100%);
   color: var(--text-primary);
   overflow: hidden;
@@ -545,8 +546,8 @@ ul {
 .hero__grid-bg {
   position: absolute; inset: 0; pointer-events: none;
   background-image:
-    linear-gradient(rgba(24, 87, 184, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(24, 87, 184, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(29, 78, 216, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 78, 216, 0.045) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse 60% 70% at 20% 20%, #000 20%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 60% 70% at 20% 20%, #000 20%, transparent 75%);
@@ -569,8 +570,8 @@ ul {
 .hero__badge {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 6px 14px; border-radius: var(--r-pill);
-  background: rgba(24, 87, 184, 0.06);
-  border: 1px solid rgba(24, 87, 184, 0.16);
+  background: rgba(29, 78, 216, 0.06);
+  border: 1px solid rgba(29, 78, 216, 0.16);
   font-size: 13px; font-weight: 600; color: var(--brand-primary);
   margin-bottom: var(--sp-5);
 }
@@ -606,8 +607,8 @@ ul {
 .hero-panel__tab {
   font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
   color: var(--brand-primary);
-  background: rgba(24, 87, 184, 0.08);
-  border: 1px solid rgba(24, 87, 184, 0.16);
+  background: rgba(29, 78, 216, 0.08);
+  border: 1px solid rgba(29, 78, 216, 0.16);
   padding: 3px 10px; border-radius: var(--r-pill);
 }
 /* 迷你柱状图（RASK 趋势示意） */
@@ -619,7 +620,7 @@ ul {
 }
 .hero-panel__chart i {
   flex: 1; border-radius: 4px 4px 0 0;
-  background: linear-gradient(180deg, rgba(24, 87, 184, 0.28), rgba(24, 87, 184, 0.12));
+  background: linear-gradient(180deg, rgba(29, 78, 216, 0.28), rgba(29, 78, 216, 0.12));
 }
 .hero-panel__chart i:last-child {
   background: linear-gradient(180deg, var(--brand-primary), var(--brand-accent));
@@ -641,8 +642,8 @@ ul {
   display: inline-flex; align-items: center; justify-content: center;
   width: 24px; height: 24px; border-radius: var(--r-sm);
   font-family: var(--font-mono); font-size: 11px; font-weight: 700;
-  color: var(--brand-primary); background: rgba(24, 87, 184, 0.08);
-  border: 1px solid rgba(24, 87, 184, 0.16);
+  color: var(--brand-primary); background: rgba(29, 78, 216, 0.08);
+  border: 1px solid rgba(29, 78, 216, 0.16);
 }
 .hero-fare__action {
   font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
