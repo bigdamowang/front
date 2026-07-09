@@ -1,10 +1,11 @@
 <template>
   <header class="app-header">
     <div class="header-container">
-      <!-- Logo -->
+      <!-- Logo(v1 双行: Mito 主标 + 海南迈途数创科技全称) -->
       <div class="logo">
         <a href="#home" @click="scrollTo('home', $event)">
-          <span class="logo-text">MitoAI Technology</span>
+          <span class="logo-text-primary">Mito</span>
+          <span class="logo-text-secondary">海南迈途数创科技有限公司</span>
         </a>
       </div>
 
@@ -65,7 +66,7 @@ function scrollTo(id: string, e: Event) {
   e.preventDefault()
   const target = document.getElementById(id)
   if (!target) return
-  const headerOffset = 64 // sticky header 高度
+  const headerOffset = 72 // sticky header 高度
   const y = target.getBoundingClientRect().top + window.scrollY - headerOffset
   window.scrollTo({ top: y, behavior: "smooth" })
   // 更新 hash 而不触发跳变
@@ -112,21 +113,41 @@ onBeforeUnmount(() => {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  height: 64px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 600;
-  color: #409eff;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
 }
 
 .logo a {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
+  gap: 4px;
+}
+
+.logo-text-primary {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--text-primary, #0f172a);
+  line-height: 1;
+}
+
+.logo-text-secondary {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--brand-primary, #4fa3d9);
+  line-height: 1;
 }
 
 .nav-menu {

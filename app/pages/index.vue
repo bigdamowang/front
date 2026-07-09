@@ -751,7 +751,7 @@ function scrollTo(id: string, e: Event) {
   e.preventDefault()
   const target = document.getElementById(id)
   if (!target) return
-  const headerOffset = 68
+  const headerOffset = 72
   const y = target.getBoundingClientRect().top + window.scrollY - headerOffset
   window.scrollTo({ top: y, behavior: "smooth" })
   history.pushState(null, "", `#${id}`)
