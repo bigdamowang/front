@@ -1,74 +1,41 @@
 <template>
-  <!-- ============================== HERO（浅色专业底 · 两栏） ============================== -->
+  <!-- ============================== HERO（浅色专业底 · 居中式） ============================== -->
   <header id="home" class="hero">
     <div class="hero__grid-bg"></div>
     <div class="container hero__inner">
-      <!-- 左栏：价值主张 -->
-      <div class="hero__col">
-        <span class="hero__badge">{{ $t("hero.badge") }}</span>
-        <h1>
-          <span class="l1">{{ $t("hero.title_l1") }}</span>
-        </h1>
-        <p class="hero__desc">
-          {{ $t("hero.desc") }}
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn-primary" href="#contact" @click="scrollTo('contact', $event)">
-            {{ $t("hero.cta_primary") }}
-          </a>
-          <a class="btn btn-ghost" href="#solutions" @click="scrollTo('solutions', $event)">
-            {{ $t("hero.cta_secondary") }}
-          </a>
-        </div>
-
-        <!-- 实时数据条（SSR 初始值 + 客户端计数动画） -->
-        <div class="hero__ticker" role="status" aria-live="polite">
-          <div class="ticker-cell">
-            <span class="ticker-label">{{ $t("home.ticker.airlines.label") }}</span>
-            <span class="ticker-num" ref="airlinesEl">{{ airlinesFmt }}</span>
-          </div>
-          <div class="ticker-cell">
-            <span class="ticker-label">{{ $t("home.ticker.prices.label") }}</span>
-            <span class="ticker-num" ref="pricesEl">{{ pricesFmt }}</span>
-          </div>
-          <div class="ticker-cell">
-            <span class="ticker-label">{{ $t("home.ticker.flights.label") }}</span>
-            <span class="ticker-num" ref="flightsEl">{{ flightsFmt }}</span>
-          </div>
-          <div class="ticker-cell">
-            <span class="ticker-label">{{ $t("home.ticker.latency.label") }}</span>
-            <span class="ticker-num">{{ latencyFmt }}<small>ms</small></span>
-          </div>
-        </div>
+      <span class="hero__badge">{{ $t("hero.badge") }}</span>
+      <h1>
+        <span class="l1">{{ $t("hero.title_l1") }}</span>
+      </h1>
+      <p class="hero__desc">
+        {{ $t("hero.desc") }}
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn-primary" href="#contact" @click="scrollTo('contact', $event)">
+          {{ $t("hero.cta_primary") }}
+        </a>
+        <a class="btn btn-ghost" href="#solutions" @click="scrollTo('solutions', $event)">
+          {{ $t("hero.cta_secondary") }}
+        </a>
       </div>
 
-      <!-- 右栏：干净的产品面板（收益决策台，示意） -->
-      <div class="hero__col" aria-hidden="true">
-        <div class="hero-panel">
-          <div class="hero-panel__bar">
-            <span class="hero-panel__title">Revenue Console</span>
-            <span class="hero-panel__tab">RASK · 30D</span>
-          </div>
-          <div class="hero-panel__chart">
-            <i v-for="(h, i) in chartBars" :key="i" :style="{ height: h + '%' }"></i>
-          </div>
-          <div class="hero-panel__rows">
-            <div class="hero-fare">
-              <span class="hero-fare__route">SHA–CAN</span>
-              <span class="hero-fare__cabin">M</span>
-              <span class="hero-fare__action hero-fare__action--hold">HOLD</span>
-            </div>
-            <div class="hero-fare">
-              <span class="hero-fare__route">PEK–HKG</span>
-              <span class="hero-fare__cabin">Y</span>
-              <span class="hero-fare__action hero-fare__action--open">OPEN</span>
-            </div>
-            <div class="hero-fare">
-              <span class="hero-fare__route">SHA–CTU</span>
-              <span class="hero-fare__cabin">K</span>
-              <span class="hero-fare__action hero-fare__action--close">CLOSE</span>
-            </div>
-          </div>
+      <!-- 实时数据条（SSR 初始值 + 客户端计数动画） -->
+      <div class="hero__ticker" role="status" aria-live="polite">
+        <div class="ticker-cell">
+          <span class="ticker-num" ref="airlinesEl">{{ airlinesFmt }}</span>
+          <span class="ticker-label">{{ $t("home.ticker.airlines.label") }}</span>
+        </div>
+        <div class="ticker-cell">
+          <span class="ticker-num" ref="pricesEl">{{ pricesFmt }}</span>
+          <span class="ticker-label">{{ $t("home.ticker.prices.label") }}</span>
+        </div>
+        <div class="ticker-cell">
+          <span class="ticker-num" ref="flightsEl">{{ flightsFmt }}</span>
+          <span class="ticker-label">{{ $t("home.ticker.flights.label") }}</span>
+        </div>
+        <div class="ticker-cell">
+          <span class="ticker-num">{{ latencyFmt }}<small>ms</small></span>
+          <span class="ticker-label">{{ $t("home.ticker.latency.label") }}</span>
         </div>
       </div>
     </div>

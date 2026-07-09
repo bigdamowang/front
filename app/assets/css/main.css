@@ -554,19 +554,22 @@ ul {
 }
 .hero__inner {
   position: relative; z-index: 2;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(32px, 5vw, 72px);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
-.hero__col { min-width: 0; }
 .hero__inner h1 {
-  max-width: 620px; font-size: clamp(36px, 4.4vw, 56px); line-height: 1.1;
+  max-width: 900px; font-size: clamp(40px, 5.2vw, 68px); line-height: 1.08;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
 }
 .hero__inner h1 span { display: block; }
-.hero__desc { font-size: clamp(16px, 1.3vw, 18px); color: var(--text-secondary); max-width: 560px; }
-.hero__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: var(--sp-5); }
+.hero__desc {
+  font-size: clamp(17px, 1.4vw, 20px); color: var(--text-secondary);
+  max-width: 660px; margin-left: auto; margin-right: auto;
+}
+.hero__cta { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: var(--sp-6); }
 .hero__badge {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 6px 14px; border-radius: var(--r-pill);
@@ -579,104 +582,28 @@ ul {
   content: ''; width: 7px; height: 7px; background: var(--brand-mint);
   border-radius: 50%;
 }
-@media (max-width: 900px) {
-  .hero__inner { grid-template-columns: 1fr; gap: 40px; }
-}
-/* ---------- Hero product panel（浅色收益决策台，替代 3D 地球玻璃卡） ---------- */
-.hero-panel {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--r-xl);
-  box-shadow: 0 30px 60px -32px rgba(15, 29, 51, 0.22), var(--shadow-sm);
-  padding: 20px;
-  overflow: hidden;
-}
-.hero-panel__bar {
-  display: flex; align-items: center; justify-content: space-between;
-  padding-bottom: 14px; margin-bottom: 16px;
-  border-bottom: 1px solid var(--border);
-}
-.hero-panel__title {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 14px; font-weight: 700; color: var(--text-primary);
-}
-.hero-panel__title::before {
-  content: ""; width: 8px; height: 8px; border-radius: 50%;
-  background: var(--brand-mint);
-}
-.hero-panel__tab {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
-  color: var(--brand-primary);
-  background: rgba(29, 78, 216, 0.08);
-  border: 1px solid rgba(29, 78, 216, 0.16);
-  padding: 3px 10px; border-radius: var(--r-pill);
-}
-/* 迷你柱状图（RASK 趋势示意） */
-.hero-panel__chart {
-  display: flex; align-items: flex-end; gap: 8px;
-  height: 120px; padding: 4px 2px 12px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 16px;
-}
-.hero-panel__chart i {
-  flex: 1; border-radius: 4px 4px 0 0;
-  background: linear-gradient(180deg, rgba(29, 78, 216, 0.28), rgba(29, 78, 216, 0.12));
-}
-.hero-panel__chart i:last-child {
-  background: linear-gradient(180deg, var(--brand-primary), var(--brand-accent));
-}
-/* 运价决策行 */
-.hero-panel__rows { display: flex; flex-direction: column; }
-.hero-fare {
-  display: grid; grid-template-columns: 1fr auto auto;
-  align-items: center; gap: 12px;
-  padding: 10px 0;
-  border-top: 1px solid var(--border);
-}
-.hero-fare:first-child { border-top: 0; }
-.hero-fare__route {
-  font-family: var(--font-mono); font-size: 13px; font-weight: 600;
-  color: var(--text-primary); letter-spacing: 0.04em;
-}
-.hero-fare__cabin {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 24px; height: 24px; border-radius: var(--r-sm);
-  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
-  color: var(--brand-primary); background: rgba(29, 78, 216, 0.08);
-  border: 1px solid rgba(29, 78, 216, 0.16);
-}
-.hero-fare__action {
-  font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
-  padding: 3px 10px; border-radius: var(--r-pill);
-}
-.hero-fare__action--hold { color: #B7791F; background: rgba(217, 152, 34, 0.12); }
-.hero-fare__action--open { color: var(--brand-mint); background: rgba(30, 163, 122, 0.12); }
-.hero-fare__action--close { color: var(--text-muted); background: rgba(138, 151, 168, 0.14); }
-@media (max-width: 900px) {
-  .hero-panel { max-width: 520px; }
-}
 
-/* ---------- Hero stat row（浅色数据条，替代暗色 ticker） ---------- */
+/* ---------- Hero stat row（浅色数据条，居中） ---------- */
 .hero__ticker {
-  margin-top: var(--sp-6);
-  display: flex; flex-wrap: wrap; gap: 32px 48px;
-  padding-top: var(--sp-5);
+  margin-top: clamp(48px, 6vw, 72px);
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 32px 64px;
+  padding-top: var(--sp-6);
   border-top: 1px solid var(--border);
+  width: 100%;
+  max-width: 860px;
 }
-.ticker-row { display: flex; gap: 32px 48px; flex-wrap: wrap; align-items: flex-start; }
-.ticker-cell { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
+.ticker-cell { display: flex; flex-direction: column; align-items: center; line-height: 1.2; }
 .ticker-label {
-  font-size: 12px; letter-spacing: 0.04em;
-  color: var(--text-muted); margin-bottom: 4px;
+  font-size: 13px; letter-spacing: 0.02em;
+  color: var(--text-muted); margin-top: 6px;
 }
 .ticker-num {
   font-variant-numeric: tabular-nums;
-  font-weight: 800; font-size: 24px; color: var(--text-primary); letter-spacing: -0.01em;
+  font-weight: 800; font-size: clamp(26px, 2.6vw, 32px); color: var(--text-primary); letter-spacing: -0.01em;
 }
-.ticker-num small { font-size: 12px; font-weight: 500; opacity: 0.7; margin-left: 2px; }
+.ticker-num small { font-size: 13px; font-weight: 500; opacity: 0.7; margin-left: 2px; }
 @media (max-width: 720px) {
-  .hero__ticker { gap: 20px 28px; }
-  .ticker-num { font-size: 20px; }
+  .hero__ticker { gap: 24px 32px; }
 }
 
 /* ---------- 认证 / 信任条（IATA · ISO · 等保） ---------- */
