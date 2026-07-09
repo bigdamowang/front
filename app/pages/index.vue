@@ -561,6 +561,131 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 
+/* ===================== SEO META (P0) ===================== */
+// 需求文档 [官网设计需求文档.md] 第 207-212 行要求:
+// 首屏 LCP < 2.5s, CLS < 0.1,OG 图,canonical,hreflang 三件套
+useSeoMeta({
+  // 基础
+  title: '迈途数创 MitoAI - 民航数字化解决方案 | 收益管理·航线网络·数据中台',
+  description:
+    '海南迈途数创科技专注民航 IT 服务,为航空公司提供收益管理、动态定价、航线网络规划、航班主控、数据中台等数字化转型解决方案。已服务 10+ 航司客户,覆盖 6 大业务领域。',
+  keywords:
+    '民航数字化,航司IT服务,收益管理,RMS,动态定价,航线网络规划,航班主控,数据中台,航空AI,海南迈途数创,MitoAI,NDC,GDS,PSS',
+  // Open Graph(LinkedIn / Facebook / 微信 / 微博 分享卡片)
+  ogType: 'website',
+  ogTitle: '迈途数创 MitoAI - 民航数字化解决方案',
+  ogDescription:
+    '国际航司业务服务商,专注收益管理、航线网络、数据中台与航空 AI。已服务 10+ 航司客户。',
+  ogImage: 'https://mitoaitech.com/og/home.png',
+  ogImageAlt: '迈途数创 MitoAI 官网首页',
+  ogUrl: 'https://mitoaitech.com/',
+  ogSiteName: '迈途数创 MitoAI',
+  ogLocale: 'zh_CN',
+  ogLocaleAlternate: ['zh_TW', 'en_US'],
+  // Twitter Card
+  twitterCard: 'summary_large_image',
+  twitterTitle: '迈途数创 MitoAI - 民航数字化解决方案',
+  twitterDescription: '国际航司业务服务商,专注收益管理、航线网络、数据中台与航空 AI。',
+  twitterImage: 'https://mitoaitech.com/og/home.png',
+  twitterSite: '@mitoaitech',
+  // Article(可省,这里用 website 类型就够了)
+  robots: 'index, follow, max-image-preview:large',
+  author: '海南迈途数创科技有限公司'
+})
+
+/* hreflang 多语言互链 + canonical + favicon + JSON-LD */
+const { locale } = useI18n()
+const currentLocale = computed(() => locale.value)
+const siteUrl = 'https://mitoaitech.com'
+
+useHead({
+  htmlAttrs: {
+    lang: currentLocale,
+    prefix: 'og: https://ogp.me/ns#'
+  },
+  link: [
+    // canonical
+    { rel: 'canonical', href: `${siteUrl}/?locale=zh-CN` },
+    // favicon
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.svg' },
+    { rel: 'manifest', href: '/site.webmanifest' },
+    // hreflang 三语言互链(需求文档 7.2 + Google 多语言 SEO 规范)
+    { rel: 'alternate', hreflang: 'zh-CN', href: `${siteUrl}/?locale=zh-CN` },
+    { rel: 'alternate', hreflang: 'zh-TW', href: `${siteUrl}/?locale=zh-TW` },
+    { rel: 'alternate', hreflang: 'en-US', href: `${siteUrl}/?locale=en-US` },
+    { rel: 'alternate', hreflang: 'x-default', href: `${siteUrl}/` }
+  ],
+  script: [
+    // JSON-LD Organization
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: '海南迈途数创科技有限公司',
+        alternateName: ['MitoAI Technology', '迈途数创', 'Hainan Mito Transport Intelligence'],
+        url: siteUrl,
+        logo: `${siteUrl}/og/home.png`,
+        description:
+          '海南迈途数创科技专注民航 IT 服务,为航空公司提供收益管理、动态定价、航线网络规划、航班主控、数据中台等数字化转型解决方案。',
+        foundingDate: '2023',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '海南自由贸易港',
+          addressLocality: '海口市',
+          addressRegion: '海南省',
+          addressCountry: 'CN'
+        },
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            contactType: 'sales',
+            areaServed: ['CN', 'APAC', 'GLOBAL'],
+            availableLanguage: ['Chinese', 'English'],
+            url: `${siteUrl}/#contact`
+          }
+        ],
+        sameAs: [
+          'https://github.com/bigdamowang/front'
+        ]
+      })
+    },
+    // JSON-LD WebSite(含搜索框,Google 支持)
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: '迈途数创 MitoAI',
+        url: siteUrl,
+        inLanguage: ['zh-CN', 'zh-TW', 'en-US'],
+        publisher: {
+          '@type': 'Organization',
+          name: '海南迈途数创科技有限公司'
+        }
+      })
+    },
+    // JSON-LD BreadcrumbList(虽然没有多页路由,但为 SEO 完整性保留结构)
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '首页',
+            item: `${siteUrl}/`
+          }
+        ]
+      })
+    }
+  ]
+})
+
 /* ===================== HERO TICKER ===================== */
 // 用 SSR 兜底初始值 + onMounted 后做计数动画
 const tickerBase = {

@@ -1,0 +1,10 @@
+# robots.txt — 海南迈途数创科技有限公司
+# https://mitoaitech.com
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/
+
+# 站点地图
+Sitemap: https://mitoaitech.com/sitemap.xml
