@@ -1,4 +1,4 @@
-﻿{
+{
   "meta": {
     "title": "邁途數創 — 民航業數智化技術服務提供商",
     "description": "邁途數創提供收益管理、運價、航線網絡、航班主控、分銷電商、NDC / One Order 與數據智能解決方案，助力航空公司提升商業運營效率。",
@@ -62,6 +62,9 @@
   "nav": {
     "brand": "邁途數創",
     "brand_full": "海南邁途數創科技有限公司",
+    "home": "首頁",
+    "products": "產品與解決方案",
+    "tech": "技術與能力",
     "solutions": "產品與解決方案",
     "technology": "技術與能力",
     "customers": "客戶與案例",
@@ -188,6 +191,7 @@
     }
   },
   "kpi": {
+    "eyebrow": "By the numbers",
     "title": "用规模化的能力，承載每一次飞行",
     "desc": "面向全服務、混合及低成本本航司，提供覆蓋航班全生命週期的可組合模塊化平台。",
     "items": {
@@ -287,6 +291,10 @@
       "ecosystem": {
         "title": "集成生態",
         "desc": "已对接主流 GDS、PSS、NDC 聚合器與航司核心系統，上线週期可控。"
+      },
+      "devops": {
+        "title": "DevOps 與持續交付",
+        "desc": "CI/CD 流水線、自動化測試、灰度發布，保障每次交付穩定可控。"
       }
     },
     "demo": {
@@ -453,11 +461,19 @@
     },
     "more": "查看全部新闻"
   },
+  "cta": {
+    "title": "與邁途數創共建下一代航司",
+    "desc": "無論您處於數位化轉型的哪個階段，我們都願意與您聊聊。",
+    "cta_primary": "預約演示",
+    "cta_secondary": "查看核心解決方案"
+  },
   "contact": {
     "eyebrow": "Contact",
     "title": "與邁途數創共建下一代航司",
-    "desc": "填寫表單或直接拨打銷售热线 — 我們會在 1 个工作日内回复。",
+    "subtitle": "填寫表單或直接撥打銷售熱線 — 我們會在 1 個工作日內回覆。",
+    "desc": "填寫表單或直接撥打銷售熱線 — 我們會在 1 個工作日內回覆。",
     "form": {
+      "title": "提交諮詢",
       "name": "您的姓名",
       "company": "所在公司",
       "role": "您的职位",
@@ -519,6 +535,10 @@
       "sales_value": "+86 0898-8888-XXXX",
       "email": "商務信箱",
       "email_value": "hello (at) mito-aero.com",
+      "phone": "聯絡電話",
+      "phone_value": "+86 400-xxx-xxxx",
+      "address": "辦公地址",
+      "addressDetail": "海南省海口市 · 海口國家高新區",
       "media": "媒體合作",
       "media_value": "press (at) mito-aero.com"
     }
@@ -566,6 +586,8 @@
   "newsletter": {
     "title": "每兩週一封 · 我們只寫值得留信箱的内容",
     "desc": "邁途團隊出品：1 篇深度行業洞察 + 3 條值得讀的民航資訊。无骚扰。",
+    "placeholder": "請輸入您的郵箱地址",
+    "small": "訂閱即代表同意接收電子郵件 — 您可隨時取消。",
     "submit": "訂閱",
     "consent": "訂閱即代表同意接收電子郵件 — 您可隨時取消。"
   },
