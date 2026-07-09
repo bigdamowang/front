@@ -236,10 +236,10 @@
           <p>{{ $t("tech.desc") }}</p>
         </div>
         <div class="tech-grid">
-          <div v-for="(t, i) in tech" :key="i" class="card card--dark reveal">
-            <div class="icon" :style="`background:${t.bg};color:${t.fg};`">{{ t.icon }}</div>
-            <h3>{{ $t(t.titleKey) }}</h3>
-            <p>{{ $t(t.descKey) }}</p>
+          <div v-for="(t, i) in tech" :key="i" class="tech-card reveal">
+            <div class="tech-card__icon" v-html="t.svg"></div>
+            <h3 class="tech-card__title">{{ $t(t.titleKey) }}</h3>
+            <p class="tech-card__desc">{{ $t(t.descKey) }}</p>
           </div>
         </div>
       </div>
@@ -791,13 +791,21 @@ const solutions = [
   { slug: "data", tagKey: "solutions.items.data.tag", titleKey: "solutions.items.data.title", descKey: "solutions.items.data.desc" }
 ]
 
+// lucide 风格 inline SVG 图标(24×24, stroke 2, currentColor)
+const cloudSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.2-8.84 6 6 0 0 0-11.6 2.34A4 4 0 0 0 5 19h12.5z"/><path d="M9 14h6"/><path d="M12 11v6"/></svg>'
+const aiSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3.5"/></svg>'
+const apiSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h12a4 4 0 0 1 4 4v2"/><path d="M16 21l4-4-4-4"/><path d="M20 17H8a4 4 0 0 1-4-4v-2"/></svg>'
+const shieldSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>'
+const networkSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v3.5"/><path d="m13.5 12-6 5"/><path d="m10.5 12 6 5"/></svg>'
+const devopsSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>'
+
 const tech = [
-  { icon: "☁", bg: "rgba(91,200,232,0.15)", fg: "#5BC8E8", titleKey: "tech.items.cloud.title", descKey: "tech.items.cloud.desc" },
-  { icon: "✦", bg: "rgba(91,200,232,0.15)", fg: "#5BC8E8", titleKey: "tech.items.ai.title", descKey: "tech.items.ai.desc" },
-  { icon: "{}", bg: "rgba(79,163,217,0.20)", fg: "#4FA3D9", titleKey: "tech.items.api.title", descKey: "tech.items.api.desc" },
-  { icon: "🛡", bg: "rgba(61,217,182,0.15)", fg: "#3DD9B6", titleKey: "tech.items.security.title", descKey: "tech.items.security.desc" },
-  { icon: "⌬", bg: "rgba(255,255,255,0.10)", fg: "#fff", titleKey: "tech.items.ecosystem.title", descKey: "tech.items.ecosystem.desc" },
-  { icon: "⚙", bg: "rgba(255,255,255,0.10)", fg: "#fff", titleKey: "tech.items.devops.title", descKey: "tech.items.devops.desc" }
+  { svg: cloudSvg, titleKey: "tech.items.cloud.title", descKey: "tech.items.cloud.desc" },
+  { svg: aiSvg, titleKey: "tech.items.ai.title", descKey: "tech.items.ai.desc" },
+  { svg: apiSvg, titleKey: "tech.items.api.title", descKey: "tech.items.api.desc" },
+  { svg: shieldSvg, titleKey: "tech.items.security.title", descKey: "tech.items.security.desc" },
+  { svg: networkSvg, titleKey: "tech.items.ecosystem.title", descKey: "tech.items.ecosystem.desc" },
+  { svg: devopsSvg, titleKey: "tech.items.devops.title", descKey: "tech.items.devops.desc" }
 ]
 
 const testimonials = [

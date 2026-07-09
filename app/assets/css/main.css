@@ -791,9 +791,74 @@ ul {
 @media (max-width: 640px) { .solutions-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Tech grid (dark) ---------- */
-.tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
-@media (max-width: 720px) { .tech-grid { grid-template-columns: 1fr; } }
+/* ---------- Tech grid (深色 section, 半透明卡) ---------- */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 720px) { .tech-grid { grid-template-columns: 1fr; gap: 14px; } }
 @media (min-width: 721px) and (max-width: 960px) { .tech-grid { grid-template-columns: repeat(2, 1fr); } }
+.tech-card {
+  position: relative;
+  display: flex; flex-direction: column;
+  padding: 32px 28px;
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform var(--dur-base) var(--ease),
+              background var(--dur-base) var(--ease),
+              border-color var(--dur-base) var(--ease),
+              box-shadow var(--dur-base) var(--ease);
+  min-height: 220px;
+}
+.tech-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 32px; right: 32px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(91, 200, 232, 0.6) 50%, transparent);
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease);
+}
+.tech-card:hover {
+  transform: translateY(-4px);
+  background: rgba(91, 168, 224, 0.08);
+  border-color: rgba(91, 200, 232, 0.45);
+  box-shadow: 0 20px 50px -22px rgba(91, 200, 232, 0.4);
+}
+.tech-card:hover::before { opacity: 1; }
+.tech-card__icon {
+  width: 56px; height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(91, 200, 232, 0.18) 0%, rgba(91, 168, 224, 0.08) 100%);
+  color: var(--brand-cyan, #5bc8e8);
+  margin-bottom: 22px;
+  border: 1px solid rgba(91, 200, 232, 0.20);
+  flex-shrink: 0;
+}
+.tech-card__icon :deep(svg),
+.tech-card__icon svg {
+  width: 28px; height: 28px;
+  display: block;
+}
+.tech-card__title {
+  font-size: 19px; font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin: 0 0 12px;
+  letter-spacing: 0.01em;
+}
+.tech-card__desc {
+  font-size: 14px; line-height: 1.7;
+  color: var(--text-on-dark-soft, #cbd5e1);
+  margin: 0;
+}
 
 /* ---------- Testimonials ---------- */
 .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
