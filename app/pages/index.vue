@@ -153,14 +153,16 @@
 
   <main role="main" id="main">
     <!-- =========================== LOGO WALL =========================== -->
+    <!-- 设计参考 v1.html 合作伙伴区块: 纯文字 + 蓝边框 + 渐变短横线 (无 SVG) -->
     <section class="section--tight">
       <div class="container">
         <div class="logo-wall">
           <div v-for="logo in logos" :key="logo.file" class="logo-card">
-            <span class="logo-card__bar"></span>
-            <div class="logo-card__svg" v-html="logo.svg"></div>
-            <strong>{{ logo.name }}</strong>
-            <small>{{ logo.en }}</small>
+            <div class="logo-card__inner">
+              <span class="logo-card__bar"></span>
+              <div class="logo-card__name">{{ logo.name }}</div>
+              <div class="logo-card__en">{{ logo.en }}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -759,24 +761,25 @@ function animateCount(el: HTMLElement | null, to: number, decimals: number, dur 
 /* ===================== 数据(从 v6 扒) ===================== */
 // 8 个航司真实 logo(从 /public/logos/*.svg 通过 Vite ?raw 内联,SSR 直出,无需异步 fetch)
 // 用 ~~/ 指向 *根目录*(Nuxt 4 compatibility 模式下,~/ 会重写到 app/,但 logo 文件在 v8/public/)
-import cesSvg from "~~/public/logos/ces.svg?raw"
-import csaSvg from "~~/public/logos/csa.svg?raw"
-import csnSvg from "~~/public/logos/csn.svg?raw"
-import gsSvg from "~~/public/logos/gs.svg?raw"
-import hnaSvg from "~~/public/logos/hna.svg?raw"
-import jdSvg from "~~/public/logos/jd.svg?raw"
-import knSvg from "~~/public/logos/kn.svg?raw"
-import ubaSvg from "~~/public/logos/uba.svg?raw"
+// logo-wall 已改为 v1 纯文字设计 (蓝边 + 渐变短横线), 不再需要 SVG 资源
+// import cesSvg from "~~/public/logos/ces.svg?raw"
+// import csaSvg from "~~/public/logos/csa.svg?raw"
+// import csnSvg from "~~/public/logos/csn.svg?raw"
+// import gsSvg from "~~/public/logos/gs.svg?raw"
+// import hnaSvg from "~~/public/logos/hna.svg?raw"
+// import jdSvg from "~~/public/logos/jd.svg?raw"
+// import knSvg from "~~/public/logos/kn.svg?raw"
+// import ubaSvg from "~~/public/logos/uba.svg?raw"
 
 const logos = [
-  { file: "ces.svg", name: "东方航空", en: "China Eastern", svg: cesSvg },
-  { file: "csa.svg", name: "中国南方航空", en: "China Southern", svg: csaSvg },
-  { file: "csn.svg", name: "中国国际航空", en: "Air China", svg: csnSvg },
-  { file: "gs.svg", name: "天津航空", en: "Tianjin Airlines", svg: gsSvg },
-  { file: "hna.svg", name: "海南航空", en: "Hainan Airlines", svg: hnaSvg },
-  { file: "jd.svg", name: "首都航空", en: "Capital Airlines", svg: jdSvg },
-  { file: "kn.svg", name: "吉祥航空", en: "Juneyao Airlines", svg: knSvg },
-  { file: "uba.svg", name: "春秋航空", en: "Spring Airlines", svg: ubaSvg }
+  { file: "ces.svg", name: "东方航空", en: "China Eastern" },
+  { file: "csa.svg", name: "中国南方航空", en: "China Southern" },
+  { file: "csn.svg", name: "中国国际航空", en: "Air China" },
+  { file: "gs.svg", name: "天津航空", en: "Tianjin Airlines" },
+  { file: "hna.svg", name: "海南航空", en: "Hainan Airlines" },
+  { file: "jd.svg", name: "首都航空", en: "Capital Airlines" },
+  { file: "kn.svg", name: "吉祥航空", en: "Juneyao Airlines" },
+  { file: "uba.svg", name: "春秋航空", en: "Spring Airlines" }
 ]
 
 const solutions = [

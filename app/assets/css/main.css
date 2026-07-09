@@ -702,74 +702,70 @@ ul {
   .ticker-num { font-size: 18px; }
 }
 
-/* ---------- Logo wall ---------- */
+/* ---------- Logo wall (v1.html partners 风格: 蓝边 + 渐变短横线 + 纯文字) ---------- */
 .logo-wall {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 24px;
   padding: var(--sp-7) 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: #fff;
 }
 @media (max-width: 900px) {
-  .logo-wall { grid-template-columns: repeat(2, 1fr); }
+  .logo-wall { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .logo-card__inner { padding: 22px 18px; }
 }
+@media (max-width: 480px) {
+  .logo-wall { grid-template-columns: 1fr; }
+}
+/* 外层: 蓝色实线 + 圆角 + padding 4px (v1 partner-border 风格) */
 .logo-card {
   position: relative;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 32px 20px 28px; border-radius: 0;
-  border: none;
-  border-right: 1px solid rgba(15, 23, 42, 0.06);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
-  background: #ffffff;
-  text-align: center;
-  transition: background var(--dur-base) var(--ease);
-  min-height: 168px;
-}
-.logo-card:nth-child(4n) { border-right: none; }
-.logo-card:nth-last-child(-n+4) { border-bottom: none; }
-@media (max-width: 900px) {
-  .logo-card { border-right: 1px solid rgba(15, 23, 42, 0.06); border-bottom: 1px solid rgba(15, 23, 42, 0.06); }
-  .logo-card:nth-child(2n) { border-right: none; }
-  .logo-card:nth-last-child(-n+2) { border-bottom: none; }
+  border: 2px solid var(--brand-primary);
+  border-radius: 1rem;
+  padding: 4px;
+  background: transparent;
+  transition: border-color var(--dur-base) var(--ease),
+              transform var(--dur-base) var(--ease),
+              box-shadow var(--dur-base) var(--ease);
 }
 .logo-card:hover {
-  background: linear-gradient(180deg, #fafbfd 0%, #f4f7fa 100%);
+  border-color: var(--brand-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -16px rgba(91, 168, 224, 0.45);
 }
+/* 内层: 白底 + 圆角 + 居中 */
+.logo-card__inner {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #ffffff;
+  border-radius: calc(1rem - 4px);
+  padding: 30px 24px;
+  text-align: center;
+  min-height: 110px;
+}
+/* 顶部 12×0.5 短横线渐变 (v1 partner-card 顶部装饰) */
 .logo-card__bar {
-  display: block; width: 24px; height: 2px; border-radius: 2px;
-  background: var(--brand-primary); margin-bottom: 18px; opacity: 0.9;
+  display: block;
+  width: 12px; height: 2px; border-radius: 1px;
+  background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-cyan) 100%);
+  margin-bottom: 14px;
   transition: width var(--dur-base) var(--ease);
 }
-.logo-card:hover .logo-card__bar { width: 40px; }
-.logo-card__svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 64px;
-  margin-bottom: 16px;
-  filter: grayscale(0.85);
-  opacity: 0.6;
-  transition: filter var(--dur-base) var(--ease), opacity var(--dur-base) var(--ease), transform var(--dur-base) var(--ease);
+.logo-card:hover .logo-card__bar { width: 36px; }
+.logo-card__name {
+  font-size: 17px; font-weight: 700;
+  color: var(--text-primary, #0f172a);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
 }
-.logo-card__svg :deep(svg),
-.logo-card__svg svg {
-  width: auto;
-  height: 100%;
-  max-height: 64px;
-  max-width: 100%;
-  display: block;
-  object-fit: contain;
+.logo-card__en {
+  font-size: 11px; font-weight: 500;
+  color: var(--text-muted, #94a3b8);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
 }
-.logo-card:hover .logo-card__svg {
-  filter: grayscale(0);
-  opacity: 1;
-  transform: translateY(-2px);
-}
-.logo-card strong { display: block; font-size: 15px; font-weight: 600; color: var(--text-primary); letter-spacing: 0.04em; line-height: 1.3; }
-.logo-card small { display: block; font-size: 11px; color: var(--text-muted); margin-top: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
 
 /* ---------- KPI strip ---------- */
 .kpi {
