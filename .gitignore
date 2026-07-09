@@ -1,51 +1,26 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Example SysUserDetails template template
-### Example SysUserDetails template
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
 
-# IntelliJ project files
-.idea
-*.iml
-out
-gen
-target
-.kiro
-.trae
-/.trae
-/.kiro
-*.log
-package-lock.json
-README.md
-.history
-scripts
-# Nacos
-!**/nacos/target
-**/nacos/bin/work
-**/nacos/data
-logs
-**/nacos/LICENSE
-**/nacos/NOTICE
-types/
-.eslintrc-auto-import.json
-pnpm-lock.yaml
-package-lock.json
-yarn.lock
-# Canal
-h2.mv.db
-**/meta.dat
-scripts
-# https://raw.githubusercontent.com/redhat-developer/vscode-java/master/.gitignore
-# vscode
-server
+# Node dependencies
 node_modules
-*.vsix
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Misc
 .DS_Store
-.vscode-test
-undefined
 dist
-jre
-.vscode
-.settings
-.classpath
-.project
-test/resources/projects/**/.vscode
-test/resources/projects/maven/salut/testGradle
+
+# Local env files
+.env
+.env.*
+!.env.example
