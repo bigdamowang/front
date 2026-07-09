@@ -19,8 +19,13 @@
 
 export default defineI18nConfig(() => ({
   legacy: false,
+  locale: "zh-CN",
   fallbackLocale: false,
   silentFallbackWarn: true,
   silentTranslationWarn: true,
-  warnHtmlMessage: false
+  warnHtmlMessage: false,
+  missingWarn: false,
+  fallbackWarn: false,
+  // 禁用 locale 归一化：zh-TW 不会被解析为 zh
+  localeMatcher: "lookup"
 }))

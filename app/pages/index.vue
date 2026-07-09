@@ -217,16 +217,16 @@
             <span class="tag">{{ $t(`${s.tagKey}`) }}</span>
             <h3>{{ $t(`${s.titleKey}`) }}</h3>
             <p>{{ $t(`${s.descKey}`) }}</p>
-            <a class="btn-link" href="#solutions" @click="scrollTo('solutions', $event)">
+            <NuxtLink class="btn-link" :to="`/products/${s.slug}`">
               {{ $t("solutions.cta_more") }}
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
     </section>
 
     <!-- =========================== TECH 暗色 6 项 =========================== -->
-    <section class="section section--dark">
+    <section id="technology" class="section section--dark">
       <div class="container">
         <div class="section-head section-head--center reveal">
           <span class="eyebrow">{{ $t("tech.eyebrow") }}</span>
@@ -276,6 +276,23 @@
             <p class="quote">{{ $t(c.quoteKey) }}</p>
             <div class="name">{{ $t(c.nameKey) }}</div>
             <div class="role">{{ $t(c.companyKey) }}</div>
+          </div>
+        </div>
+
+        <!-- Case Studies with Metrics -->
+        <div class="cases-grid reveal" style="margin-top: 60px;">
+          <div v-for="(cs, i) in caseStudies" :key="i" class="case-card">
+            <div class="case-card__header">
+              <span class="tag">{{ $t(cs.scopeKey) }}</span>
+              <h3>{{ $t(cs.headlineKey) }}</h3>
+            </div>
+            <div class="case-card__metrics">
+              <div v-for="(m, j) in cs.metrics" :key="j" class="metric">
+                <div class="metric__value">{{ m.value }}</div>
+                <div class="metric__label">{{ m.label }}</div>
+              </div>
+            </div>
+            <p class="case-card__summary">{{ $t(cs.summaryKey) }}</p>
           </div>
         </div>
       </div>
@@ -370,6 +387,35 @@
             </button>
           </div>
           <a class="insight-strip__all" href="#" @click.prevent>{{ $t("insights.view_all") }} →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== PRICING / COMMITMENT =========================== -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">{{ $t("pricing.eyebrow") }}</span>
+          <h2>{{ $t("pricing.title") }}</h2>
+          <p>{{ $t("pricing.desc") }}</p>
+        </div>
+        <div class="pricing-grid reveal">
+          <div class="pricing-card">
+            <div class="pricing-card__icon"></div>
+            <h3>{{ $t("pricing.items.p1.title") }}</h3>
+            <p>{{ $t("pricing.items.p1.desc") }}</p>
+          </div>
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-card__badge">{{ $t("pricing.items.p2.badge") }}</div>
+            <div class="pricing-card__icon">⚡</div>
+            <h3>{{ $t("pricing.items.p2.title") }}</h3>
+            <p>{{ $t("pricing.items.p2.desc") }}</p>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-card__icon"></div>
+            <h3>{{ $t("pricing.items.p3.title") }}</h3>
+            <p>{{ $t("pricing.items.p3.desc") }}</p>
+          </div>
         </div>
       </div>
     </section>
@@ -479,19 +525,19 @@
             <h3 style="margin-bottom: var(--sp-4);">{{ $t("contact.form.title") }}</h3>
             <label style="display:flex; flex-direction:column; gap:6px; margin-bottom: var(--sp-3); font-size:14px; font-weight:500; color:var(--text-secondary);">
               <span>{{ $t("contact.form.name") }}</span>
-              <input v-model="form.name" type="text" required style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
+              <input v-model="form.name" type="text" name="name" required :placeholder="$t('contact.form.name')" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
             </label>
             <label style="display:flex; flex-direction:column; gap:6px; margin-bottom: var(--sp-3); font-size:14px; font-weight:500; color:var(--text-secondary);">
               <span>{{ $t("contact.form.email") }}</span>
-              <input v-model="form.email" type="email" required style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
+              <input v-model="form.email" type="email" name="email" required :placeholder="$t('contact.form.email')" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
             </label>
             <label style="display:flex; flex-direction:column; gap:6px; margin-bottom: var(--sp-3); font-size:14px; font-weight:500; color:var(--text-secondary);">
               <span>{{ $t("contact.form.company", "公司") }}</span>
-              <input v-model="form.company" type="text" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
+              <input v-model="form.company" type="text" name="company" :placeholder="$t('contact.form.company', '公司')" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff;" />
             </label>
             <label style="display:flex; flex-direction:column; gap:6px; margin-bottom: var(--sp-3); font-size:14px; font-weight:500; color:var(--text-secondary);">
               <span>{{ $t("contact.form.message") }}</span>
-              <textarea v-model="form.message" rows="5" required style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff; font-family: inherit;"></textarea>
+              <textarea v-model="form.message" name="message" rows="5" required :placeholder="$t('contact.form.message')" style="padding:10px 12px; border:1px solid var(--border); border-radius: var(--r-md); background:#fff; font-family: inherit;"></textarea>
             </label>
             <div class="form__actions">
               <button class="btn btn-primary" type="submit" :disabled="contactSubmitting">
@@ -609,12 +655,12 @@ const logos = [
 ]
 
 const solutions = [
-  { tagKey: "solutions.items.rm.tag", titleKey: "solutions.items.rm.title", descKey: "solutions.items.rm.desc" },
-  { tagKey: "solutions.items.pricing.tag", titleKey: "solutions.items.pricing.title", descKey: "solutions.items.pricing.desc" },
-  { tagKey: "solutions.items.network.tag", titleKey: "solutions.items.network.title", descKey: "solutions.items.network.desc" },
-  { tagKey: "solutions.items.ops.tag", titleKey: "solutions.items.ops.title", descKey: "solutions.items.ops.desc" },
-  { tagKey: "solutions.items.retail.tag", titleKey: "solutions.items.retail.title", descKey: "solutions.items.retail.desc" },
-  { tagKey: "solutions.items.data.tag", titleKey: "solutions.items.data.title", descKey: "solutions.items.data.desc" }
+  { slug: "rms", tagKey: "solutions.items.rm.tag", titleKey: "solutions.items.rm.title", descKey: "solutions.items.rm.desc" },
+  { slug: "pms", tagKey: "solutions.items.pricing.tag", titleKey: "solutions.items.pricing.title", descKey: "solutions.items.pricing.desc" },
+  { slug: "nps", tagKey: "solutions.items.network.tag", titleKey: "solutions.items.network.title", descKey: "solutions.items.network.desc" },
+  { slug: "ofc", tagKey: "solutions.items.ops.tag", titleKey: "solutions.items.ops.title", descKey: "solutions.items.ops.desc" },
+  { slug: "retail", tagKey: "solutions.items.retail.tag", titleKey: "solutions.items.retail.title", descKey: "solutions.items.retail.desc" },
+  { slug: "data", tagKey: "solutions.items.data.tag", titleKey: "solutions.items.data.title", descKey: "solutions.items.data.desc" }
 ]
 
 const tech = [
@@ -630,6 +676,36 @@ const testimonials = [
   { quoteKey: "customers.testimonials.t1.quote", nameKey: "customers.testimonials.t1.name", companyKey: "customers.testimonials.t1.company" },
   { quoteKey: "customers.testimonials.t2.quote", nameKey: "customers.testimonials.t2.name", companyKey: "customers.testimonials.t2.company" },
   { quoteKey: "customers.testimonials.t3.quote", nameKey: "customers.testimonials.t3.name", companyKey: "customers.testimonials.t3.company" }
+]
+
+const caseStudies = [
+  {
+    scopeKey: "customers.cases.c1.scope",
+    headlineKey: "customers.cases.c1.headline",
+    metrics: [
+      { value: "+12.4%", labelKey: "customers.cases.c1.stats.0.label" },
+      { value: "5x", labelKey: "customers.cases.c1.stats.1.label" }
+    ],
+    summaryKey: "customers.cases.c1.summary"
+  },
+  {
+    scopeKey: "customers.cases.c2.scope",
+    headlineKey: "customers.cases.c2.headline",
+    metrics: [
+      { value: "+7", labelKey: "customers.cases.c2.stats.0.label" },
+      { value: "91%", labelKey: "customers.cases.c2.stats.1.label" }
+    ],
+    summaryKey: "customers.cases.c2.summary"
+  },
+  {
+    scopeKey: "customers.cases.c3.scope",
+    headlineKey: "customers.cases.c3.headline",
+    metrics: [
+      { value: "8x", labelKey: "customers.cases.c3.stats.0.label" },
+      { value: "-43%", labelKey: "customers.cases.c3.stats.1.label" }
+    ],
+    summaryKey: "customers.cases.c3.summary"
+  }
 ]
 
 const whitepapers = [

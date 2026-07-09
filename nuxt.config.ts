@@ -40,9 +40,9 @@ export default defineNuxtConfig({
     // 这里保留原有 app/locales 目录结构
     restructureDir: false,
     locales: [
-      { code: "zh-CN", language: "zh-CN", name: "简体中文", file: "zh-CN.json" },
-      { code: "zh-TW", language: "zh-TW", name: "繁體中文", file: "zh-TW.json" },
-      { code: "en-US", language: "en-US", name: "English", file: "en-US.json" }
+      { code: "zh-CN", name: "简体中文", file: "zh-CN.json" },
+      { code: "zh-TW", name: "繁體中文", file: "zh-TW.json" },
+      { code: "en-US", name: "English", file: "en-US.json" }
     ],
     defaultLocale: "zh-CN",
     langDir: "locales/",

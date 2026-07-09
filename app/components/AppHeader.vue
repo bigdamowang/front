@@ -166,7 +166,7 @@ onBeforeUnmount(() => {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #409eff;
+  color: var(--brand-primary);
 }
 
 .nav-link.active::after {
@@ -176,7 +176,7 @@ onBeforeUnmount(() => {
   right: 0;
   bottom: -4px;
   height: 2px;
-  background: var(--brand-primary, #4fa3d9);
+  background: var(--brand-primary);
   border-radius: 2px;
 }
 

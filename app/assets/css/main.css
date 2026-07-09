@@ -820,6 +820,49 @@ ul {
 .section--dark .tm-card .name { color: #fff; }
 .section--dark .tm-card .role { color: var(--text-on-dark-soft); }
 
+/* ---------- Case Studies ---------- */
+.cases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
+@media (max-width: 960px) { .cases-grid { grid-template-columns: 1fr; } }
+.case-card {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: var(--sp-6); transition: box-shadow 0.3s, transform 0.3s;
+}
+.case-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.case-card__header .tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--brand-primary); background: rgba(79,163,217,0.10); padding: 3px 10px; border-radius: 999px; margin-bottom: 12px; }
+.case-card__header h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-primary); line-height: 1.4; margin: 0 0 16px; }
+.case-card__metrics { display: flex; gap: var(--sp-5); margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.metric__value { font-size: 1.5rem; font-weight: 700; color: var(--brand-primary); line-height: 1; }
+.metric__label { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+.case-card__summary { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+
+/* ---------- Pricing / Commitment ---------- */
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
+@media (max-width: 960px) { .pricing-grid { grid-template-columns: 1fr; } }
+.pricing-card {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: var(--sp-6); text-align: center; transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+}
+.pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.pricing-card--featured {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 1px var(--brand-primary);
+}
+.pricing-card--featured:hover { box-shadow: var(--shadow-lg), 0 0 0 1px var(--brand-primary); }
+.pricing-card__badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--brand-primary); color: #fff; font-size: 12px; font-weight: 600;
+  padding: 4px 16px; border-radius: 999px; white-space: nowrap;
+}
+.pricing-card__icon {
+  width: 48px; height: 48px; margin: 0 auto 16px;
+  background: rgba(79,163,217,0.10); border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+}
+.pricing-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0 0 12px; }
+.pricing-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+
 /* ---------- News list ---------- */
 .news-list { display: flex; flex-direction: column; }
 .news-item {
