@@ -11,6 +11,9 @@ export default defineNuxtConfig({
 
   // 应用配置
   app: {
+    // 部署到 https://47.107.90.87/v8/ 等子路径时必须设为 '/v8/'
+    // 告诉 Nuxt 所有静态资源 / 路由 / payload 路径都加 /v8/ 前缀
+    baseURL: process.env.NUXT_PUBLIC_BASE_URL || '/v8/',
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
@@ -94,14 +97,13 @@ export default defineNuxtConfig({
   // 兼容性日期
   compatibilityDate: "2024-07-09",
 
-  // 环境配置: API baseURL + 3 环境
-  // 优先级: NUXT_PUBLIC_API_BASE > 环境默认
-  // dev:   http://localhost:3000     (node/server.js)
-  // prod:  https://api.mitoaitech.com (假设)
+  // 纯静态部署: API baseURL 由运行时的 window.SITE_CONFIG.apiURL 决定
+  // dev:        http://localhost:3000 (node/server.js)
+  // preview:    '' (空 = 同源, 纯静态)
+  // production: '' (空 = 同源, 纯静态, 由 index.html 注入)
   runtimeConfig: {
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_BASE
-        || (process.env.NODE_ENV === "production" ? "https://api.mitoaitech.com" : "http://localhost:3000")
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || ''
     }
   }
 })
