@@ -1,4 +1,4 @@
-import { IHttpResponse, IObject } from "@/types/interface"
+import type { IHttpResponse, IObject } from "@/types/interface"
 import http from "@/utils/http"
 
 /**

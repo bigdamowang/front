@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { IObject } from "@/types/interface"
+import type { IObject } from "@/types/interface"
 
 export const useAppStore = defineStore("app", {
   state: () => ({

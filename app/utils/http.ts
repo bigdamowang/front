@@ -1,5 +1,5 @@
 import app from "@/constants/app"
-import { IHttpResponse, IObject } from "@/types/interface"
+import type { IHttpResponse, IObject } from "@/types/interface"
 import { getToken, getRefreshToken, getCache, setCache } from "./cache"
 import { getValueByKeys } from "./utils"
 

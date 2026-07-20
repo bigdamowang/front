@@ -1,4 +1,4 @@
-import { ICacheOptions, IObject } from "@/types/interface"
+import type { ICacheOptions, IObject } from "@/types/interface"
 import { isNullOrUndefined } from "./utils"
 
 const fix = "v1@"

@@ -83,6 +83,11 @@ export default defineNuxtConfig({
       crawlLinks: false,
       routes: ["/"],
       failOnError: false
+    },
+    // 显式不启用 nitro cache driver (避免 Vite 7 + nitro-server 3.21 的 cache-driver.js 警告)
+    storage: {
+      data: { driver: "memory" },
+      cache: { driver: "memory" }
     }
   },
 

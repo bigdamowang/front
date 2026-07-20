@@ -1,4 +1,4 @@
-import { IFunction, IObject } from "@/types/interface"
+import type { IFunction, IObject } from "@/types/interface"
 
 /**
  * 获取对象下的字段值
